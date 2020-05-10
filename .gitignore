@@ -1,0 +1,17 @@
+# session files
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.RProj
+
+# rendering output
+README.html
+
+# build output
+_book/
+_bookdown_files/
+
+# figures
+figures/
+
