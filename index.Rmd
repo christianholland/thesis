@@ -1,39 +1,42 @@
 ---
-author: 'Your R. Name'
-date: 'May 20xx'
-institution: 'Reed College'
-division: 'Mathematics and Natural Sciences'
-advisor: 'Advisor F. Name'
-# If you have more two advisors, un-silence line 7
-#altadvisor: 'Your Other Advisor'
-department: 'Mathematics'
-degree: 'Bachelor of Arts'
-title: 'My Final College Paper'
+# +-----Title------------------------------------------------------------------+
+title: "My final PhD thesis"
+
+# +-----Author-----------------------------------------------------------------+
+author: "Christian H. Holland"
+date: "`r Sys.Date()`"
+degree: "M.Sc"
+birthplace: "Jülich, Germany"
+
+# +-----Supervisors------------------------------------------------------------+
+advisor: "Prof. Dr. Ursula Klingmüller"
+coadvisor: "Prof. Dr. Julio Saez-Rodriguez"
+
+# +-----Dates------------------------------------------------------------+
+submissionmonth: "December"
+submissionyear: "2020"
+defense: "01.01.2019"
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
   # hdlbrgdown::thesis_pdf: default
- hdlbrgdown::thesis_gitbook: default
-#  hdlbrgdown::thesis_word: default
-#  hdlbrgdown::thesis_epub: default
-# If you are creating a PDF you'll need to write your preliminary content (e.g., abstract, acknowledgements) here or
-# use code similar to line 22-23 for the .RMD files. If you are NOT producing a PDF, you can delete or silence lines 21-32 in this YAML header.
+  hdlbrgdown::thesis_gitbook: default
+  # hdlbrgdown::thesis_word: default
+  # hdlbrgdown::thesis_epub: default
+  
 abstract: |
-  `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd"), collapse = '\n  ')`
-# If you'd rather include the preliminary content in files instead of inline
-# like below, use a command like that for the abstract above.  Note that a tab is 
-# needed on the line after the `|`.
-acknowledgements: |
-  I want to thank a few people.
-dedication: |
-  You can have a dedication here if you wish. 
+  `r if(knitr:::is_latex_output()) paste(readLines("sections/001-abstract.Rmd"), collapse = "\n  ")`
+declaration: |
+  `r if(knitr:::is_latex_output()) paste(readLines("sections/002-declaration.Rmd"), collapse = "\n  ")`
 preface: |
-  This is an example of a thesis setup to use the reed thesis document class
-  (for LaTeX) and the R bookdown package, in general.
+  `r if(knitr:::is_latex_output()) paste(readLines("sections/003-preface.Rmd"), collapse = "\n  ")`
+acknowledgements: |
+  `r if(knitr:::is_latex_output()) paste(readLines("sections/004-acknowledge.Rmd"), collapse = "\n  ")`
+  
 # Specify the location of the bibliography below
 bibliography: bib/references.bib
 # Download your specific csl file and refer to it in the line below.
-csl: csl/apa.csl
+csl: style/apa.csl
 lot: true
 lof: true
 # If you prefer blank lines between paragraphs, un-silence lines  40-41 (this requires package tikz)
@@ -132,7 +135,7 @@ Do not include 00(two-hyphens)prelim.Rmd and 00-abstract.Rmd in the YAML file--t
 on chapters.
 -->
 
-# Introduction {.unnumbered}
+# Frontmatter {.unnumbered}
 
 Welcome to the _R Markdown_ thesis template. This template is based on (and in many places copied directly from) the Reed College LaTeX template, but hopefully it will provide a nicer interface for those that have never used TeX or LaTeX before.  Using _R Markdown_ will also allow you to easily keep track of your analyses in **R** chunks of code, with the resulting plots and output included as well.  The hope is this _R Markdown_ template gets you in the habit of doing reproducible research, which benefits you long-term as a researcher, but also will greatly help anyone that is trying to reproduce or build onto your results down the road.
 
