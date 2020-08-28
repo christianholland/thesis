@@ -17,7 +17,7 @@ get_citation_num = function(id) {
 }
 ```
 
-```{r "google-analytics"}
+```{r "google-analytics", eval=FALSE, include=FALSE}
 # options(gargle_oauth_email = "cholland2408@gmail.com")
 # options(gargle_oauth_email = TRUE)
 # googledrive::drive_auth(email = TRUE)
@@ -47,6 +47,20 @@ access_ga = function(id) {
                            "United Kingdom" = "UK",
                            "Czechia" = "Czech Republic"))
 }
+
+# save google analytics data for later use
+gh_pages = c("FUNKI App", "CEVIChE","ReHeat","CKD App", "dorothea", "progeny")
+gh_stats = ga_property_list[gh_pages] %>% 
+  map(access_ga)
+
+# add timestamp
+gh_stats$timestamp = format(Sys.time(), '%d %B %Y')
+
+saveRDS(gh_stats, here("data/contributions/gh_page_stats.rds"))
+```
+
+```{r load-gh-page-stats}
+gh_stats = readRDS(here("data/contributions/gh_page_stats.rds"))
 
 plot_worldmap = function(property) {
   world = map_data("world")
@@ -88,8 +102,6 @@ plot_cumsum = function(property) {
     ylim(c(0, NA)) +
     labs(x = "Time", y="Total number of visitors")
 }
-
-dorothea = access_ga(ga_property_list$dorothea)
 ```
 
 
@@ -106,15 +118,15 @@ My contribution focussed on the inference of TF-target interactions from gene ex
 
 As of `r today()` this work gathered `r get_citation_num("Benchmark and")` citations on [Google Scholar](https://scholar.google.com/scholar?hl=de&as_sdt=0%2C5&q=Benchmark+and+integration+of+resources+for+the+estimation+of+human+transcription+factor+activities&btnG=).
 
-```{r "funki-stats", eval=FALSE, fig.asp=0.9, include=FALSE}
-funki = access_ga(ga_property_list$`FUNKI App`)
+```{r "funki-stats", fig.asp=0.9, fig.cap = "Visitor statistics for [_FUNKI_](https://saezlab.shinyapps.io/funkiapp/). **A** Number of visitors per week. **B** Total number of visitors. **C** Origin of the visitors.", fig.scap = "Visitor statistics for _FUNKI_."}
+funki = gh_stats$`FUNKI App`
 
 ts = plot_timecourse(funki) 
 m = plot_worldmap(funki)
 cs = plot_cumsum(funki)
 
 ((ts + cs) / m) + plot_annotation(tag_levels = "A") +
-  labs(caption = str_c("as of ", today()))
+  labs(caption = str_c("as of ", gh_stats$timestamp))
 ```
 
 ### Signatures of cell death and proliferation in perturbation transcriptomics data - from confounding factor to effective predictions {.unlisted .unnumbered}
@@ -122,15 +134,15 @@ cs = plot_cumsum(funki)
 
 As of `r today()` this work gathered `r get_citation_num("cell death")` citations on [Google Scholar](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Signatures+of+cell+death+and+proliferation+in+perturbation+transcriptomics+data+-+from+confounding+factor+to+effective+predictions&btnG=).
 
-```{r "ceviche-stats", eval=FALSE, include=FALSE}
-ceviche = access_ga(ga_property_list$CEVIChE)
+```{r "ceviche-stats", fig.asp=0.9, fig.cap = "Visitor statistics for [_CEVIChE_](https://saezlab.shinyapps.io/ceviche/). **A** Number of visitors per week. **B** Total number of visitors. **C** Origin of the visitors.", fig.scap = "Visitor statistics for _CEVIChE_."}
+ceviche = gh_stats$CEVIChE
 
 ts = plot_timecourse(ceviche) 
 m = plot_worldmap(ceviche)
 cs = plot_cumsum(ceviche)
 
 ((ts + cs) / m) + plot_annotation(tag_levels = "A") +
-  labs(caption = str_c("as of ", today()))
+  labs(caption = str_c("as of ", gh_stats$timestamp))
 ```
 
 
@@ -144,15 +156,15 @@ As of `r today()` this work gathered `r get_citation_num("Lobular Zonation")` ci
 
 As of `r today()` this work gathered `r get_citation_num("Heart Failure")` citations on [Google Scholar](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=A+Consensus+Transcriptional+Landscape+of+Human+End-Stage+Heart+Failure&btnG=).
 
-```{r "reheat-stats", include=FALSE, eval = FALSE}
-reheat = access_ga(ga_property_list$ReHeat)
+```{r "reheat-stats", fig.asp=0.9, fig.cap = "Visitor statistics for [_ReHeat_](https://saezlab.shinyapps.io/reheat/). **A** Number of visitors per week. **B** Total number of visitors. **C** Origin of the visitors.", fig.scap = "Visitor statistics for _ReHeat_."}
+reheat = gh_stats$ReHeat
 
 ts = plot_timecourse(reheat) 
 m = plot_worldmap(reheat)
 cs = plot_cumsum(reheat)
 
 ((ts + cs) / m) + plot_annotation(tag_levels = "A") +
-  labs(caption = str_c("as of ", today()))
+  labs(caption = str_c("as of ", gh_stats$timestamp))
 ```
 
 ### A functional landscape of CKD entities from public transcriptomic data {.unlisted .unnumbered}
@@ -160,15 +172,15 @@ cs = plot_cumsum(reheat)
 
 As of `r today()` this work gathered `r get_citation_num("CKD")` citations on [Google Scholar](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=A+functional+landscape+of+CKD+entities+from+public+transcriptomic+data&btnG=).
 
-```{r "ckd-stats", eval=FALSE, include=FALSE}
-ckd = access_ga(ga_property_list$`CKD App`)
+```{r "ckd-stats", fig.asp=0.9, fig.cap = "Visitor statistics for [_CKD App_](https://saezlab.shinyapps.io/ckd_landscape/). **A** Number of visitors per week. **B** Total number of visitors. **C** Origin of the visitors.", fig.scap = "Visitor statistics for _CKD App_."}
+ckd = gh_stats$`CKD App`
 
 ts = plot_timecourse(ckd) 
 m = plot_worldmap(ckd)
 cs = plot_cumsum(ckd)
 
 ((ts + cs) / m) + plot_annotation(tag_levels = "A") +
-  labs(caption = str_c("as of ", today()))
+  labs(caption = str_c("as of ", gh_stats$timestamp))
 ```
 
 ### NRF2/KEAP1 in hepatocytes controls fibro- and carcinogenesis in chronic liver disease {.unlisted .unnumbered}
@@ -180,14 +192,14 @@ cs = plot_cumsum(ckd)
 ### dorothea {.unlisted .unnumbered}
 See Figure \@ref(fig:dorothea-bc-stats)
 ```{r dorothea-gh-stats, fig.asp=0.9, fig.cap = "Visitor statistics for [_dorothea_'s GitHub page](https://saezlab.github.io/dorothea/). **A** Number of visitors per week. **B** Total number of visitors. **C** Origin of the visitors.", fig.scap = "Visitor statistics for _dorothea_'s GitHub page."}
-dorothea = access_ga(ga_property_list$dorothea)
+dorothea = gh_stats$dorothea
 
 ts = plot_timecourse(dorothea) 
 m = plot_worldmap(dorothea)
 cs = plot_cumsum(dorothea)
 
 ((ts + cs) / m) + plot_annotation(tag_levels = "A") + 
-  labs(caption = str_c("as of ", today()))
+  labs(caption = str_c("as of ", gh_stats$timestamp))
 ```
 
 (ref:scap-dorothea-gh-stats) Performance of current Splatter simulations.
@@ -212,14 +224,14 @@ bioc_stats %>%
 
 ### progeny {.unlisted .unnumbered}
 ```{r "progeny-gh-stats", fig.asp=0.9, fig.cap = "Visitor statistics for [_progeny_'s GitHub page](https://saezlab.github.io/progeny/). **A** Number of visitors per week. **B** Total number of visitors. **C** Origin of the visitors.", fig.scap = "Visitor statistics for _progeny_'s GitHub page."}
-progeny = access_ga(ga_property_list$progeny)
+progeny = gh_stats$progeny
 
 ts = plot_timecourse(progeny) 
 m = plot_worldmap(progeny)
 cs = plot_cumsum(progeny)
 
 ((ts + cs) / m) + plot_annotation(tag_levels = "A") +
-  labs(caption = str_c("as of ", today()))
+  labs(caption = str_c("as of ", gh_stats$timestamp))
 ```
 
 ```{r "progeny-bc-stats", fig.cap = "Download statistics of the [_progeny_ Bioconductor package](https://bioconductor.org/packages/release/bioc/html/progeny.html). Red colored bars indicate the time from which I contributed to the development.", fig.scap = "Download statistics of the _progeny_ Bioconductor package"}
