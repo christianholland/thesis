@@ -83,25 +83,46 @@ knitr::opts_chunk$set(
 
 ```{r libraries}
 # File paths
-library("here")
+library(here)
 
 # Plotting
-library("ggplot2")
-library("patchwork")
-library("RColorBrewer")
+library(ggplot2)
+library(patchwork)
+library(RColorBrewer)
+library(maps)
+library(AachenColorPalette) # devtools::install_github("christianholland/AachenColorPalette")
 
 # Strings
-library("stringr")
+library(stringr)
 
 # File IO
-library("readr")
+library(readr)
 
 # Presentation
-library("knitr")
+library(knitr)
 
 # Manipulation
-library("dplyr")
-library("tidyr")
+library(dplyr)
+library(tidyr)
+library(purrr)
+library(forcats)
+
+# Tables
+library(tibble)
+
+# Dates
+library(lubridate)
+
+# APIs
+library(scholar)
+library(googleAnalyticsR)
+```
+
+
+```{r functions}
+today = function() {
+  format(Sys.time(), '%d %B %Y')
+}
 ```
 
 ```{r source}

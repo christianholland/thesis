@@ -1,0 +1,243 @@
+# Other contributions {#other-contrib}
+
+<!-- required to display altmetric badge -->
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+In this chapter, I will briefly present my contributions to other projects that are not directly related to the topic of this thesis, but still made up an essential part of my Ph.D. At the time of writing, all of the manuscripts listed have either been published in, or at least submitted to, peer-reviewed journals. The R-packages have been accepted at [Bioconductor](https://www.bioconductor.org/), an open source repository for bioinformatic tools.
+
+```{r "google-scholar"}
+id = "h_y2uTwAAAAJ"
+publication_list = scholar::get_publications(id) %>%
+  as_tibble()
+
+get_citation_num = function(id) {
+  publication_list %>%
+    filter(stringr::str_detect(title, pattern = id)) %>%
+    pull(cites)
+}
+```
+
+```{r "google-analytics"}
+# options(gargle_oauth_email = "cholland2408@gmail.com")
+# options(gargle_oauth_email = TRUE)
+# googledrive::drive_auth(email = TRUE)
+# options(gargle_quiet = TRUE)
+ga_auth(email = "cholland2408@gmail.com")
+ga_property_list = ga_account_list() %>%
+  filter(accountName == "Saezlab") %>%
+  select(webPropertyName, viewId) %>%
+  group_by(webPropertyName) %>%
+  summarise(tmp = list(viewId)) %>%
+  deframe() 
+
+access_ga = function(id) {
+  google_analytics(id,
+                   #"219210421",
+                   date_range = c("2017-05-01", "today"),
+                   metrics = "sessions",
+                   dimensions = c("date","country", "city"),
+                   max = -1) %>%
+    as_tibble() %>%
+    mutate(across(where(is.character), na_if, y = "(not set)")) %>%
+    rename(region = country) %>%
+    # recode  certain entries to match countries in the world data set 
+    # hong kong is not available in the world dataset
+    mutate(region = recode(str_trim(region),
+                           "United States" = "USA",
+                           "United Kingdom" = "UK",
+                           "Czechia" = "Czech Republic"))
+}
+
+plot_worldmap = function(property) {
+  world = map_data("world")
+  property %>%
+    group_by(region) %>%
+    summarise(n = sum(sessions)) %>%
+    mutate(prop = n/sum(n)) %>%
+    full_join(world, by="region") %>%
+    filter(region != "Antarctica") %>%
+    ggplot(x, mapping = aes(x=long, y=lat, group = group)) +
+    geom_polygon(aes(fill = n)) +
+    scale_fill_distiller(palette ="RdBu", direction = -1) +
+    theme_void() +
+    # coord_fixed(1.3) +
+    # theme(legend.position = "bottom") +
+    labs(fill = str_wrap("Number of visitors per country", width = 12))
+}
+
+plot_timecourse = function(property) {
+  property %>%
+    group_by(week = as_date(cut(date, "week")),
+             year = year(date)) %>%
+    summarise(n = sum(sessions)) %>%
+    ggplot(aes(x=week, y=n)) +
+    geom_line() +
+    scale_x_date() +
+    ylim(c(0, NA)) +
+    labs(x = "Time", y="Number of weekly visitors")
+}
+
+plot_cumsum = function(property) {
+  property %>%
+    group_by(week = as_date(cut(date, "week"))) %>%
+    summarise(n = sum(sessions)) %>%
+    mutate(csum = cumsum(n)) %>%
+    ggplot(aes(x=week, y=csum)) +
+    geom_line() +
+    scale_x_date() +
+    ylim(c(0, NA)) +
+    labs(x = "Time", y="Total number of visitors")
+}
+
+dorothea = access_ga(ga_property_list$dorothea)
+```
+
+
+## Manuscripts
+### Benchmark and integration of resources for the estimation of human transcription factor activity {.unlisted .unnumbered}
+<div data-badge-popover="right" data-badge-type="donut" data-doi="10.1101/gr.240663.118" data-hide-no-mentions="true" class="altmetric-embed"></div>
+
+This work was led by Luz Garcia-Alonso, a former postdoc of Julio Saez-Rodriguez group, and was [published in Genome Research in 2019 ](http://www.genome.org/cgi/doi/10.1101/gr.240663.118).
+
+Transcriptional regulation is a key mechanism that allows cells to react adequately to external and internal stimuli or perturbation. Guided through transcription factors (TFs) the transcription and thus expression of genes can be activated or repressed that finally enables cells to adapt to the changing environment. The identification of regulatory interactions between TFs and genes is a highly active research area. Hence, there exist various resources that provide a mapping between a TF and its transcriptional targets (i.e. regulon). These regulons can be derived from various techniques spanning from web lab experiments such as ChiP-seq to in silico predictions via network reconstruction algorithms.
+In this work, four different lines of evidence of regulon construction were integrated into a consensus TF-target network, that was finally benchmarked via TF activity predictions. 
+
+My contribution focussed on the inference of TF-target interactions from gene expression data with the tool ARACNe. As a resource for the gene expression data, I utilized the GTEx portal and the TCGA program. For each tissue/cancer type, I inferred an individual gene regulatory network. Subsequently, I performed a systematic comparison among the tissue and cancer-specific networks with respect to regulon sizes and target similarities. Finally, those tissue/cancer-specific contributed to the consensus gene regulatory network. Furthermore I developed a web application to infer TF activities from user provided gene expression data. TF activities are presented in various types.
+
+As of `r today()` this work gathered `r get_citation_num("Benchmark and")` citations on [Google Scholar](https://scholar.google.com/scholar?hl=de&as_sdt=0%2C5&q=Benchmark+and+integration+of+resources+for+the+estimation+of+human+transcription+factor+activities&btnG=).
+
+```{r "funki-stats", eval=FALSE, fig.asp=0.9, include=FALSE}
+funki = access_ga(ga_property_list$`FUNKI App`)
+
+ts = plot_timecourse(funki) 
+m = plot_worldmap(funki)
+cs = plot_cumsum(funki)
+
+((ts + cs) / m) + plot_annotation(tag_levels = "A") +
+  labs(caption = str_c("as of ", today()))
+```
+
+### Signatures of cell death and proliferation in perturbation transcriptomics data - from confounding factor to effective predictions {.unlisted .unnumbered}
+<div data-badge-popover="right" data-badge-type="donut" data-doi="10.1093/nar/gkz805" data-hide-no-mentions="true" class="altmetric-embed"></div>
+
+As of `r today()` this work gathered `r get_citation_num("cell death")` citations on [Google Scholar](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Signatures+of+cell+death+and+proliferation+in+perturbation+transcriptomics+data+-+from+confounding+factor+to+effective+predictions&btnG=).
+
+```{r "ceviche-stats", eval=FALSE, include=FALSE}
+ceviche = access_ga(ga_property_list$CEVIChE)
+
+ts = plot_timecourse(ceviche) 
+m = plot_worldmap(ceviche)
+cs = plot_cumsum(ceviche)
+
+((ts + cs) / m) + plot_annotation(tag_levels = "A") +
+  labs(caption = str_c("as of ", today()))
+```
+
+
+### Influence of Liver Fibrosis on Lobular Zonation {.unlisted .unnumbered}
+<div data-badge-popover="right" data-badge-type="donut" data-doi="10.3390/cells8121556" data-hide-no-mentions="true" class="altmetric-embed"></div>
+
+As of `r today()` this work gathered `r get_citation_num("Lobular Zonation")` citations on [Google Scholar](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Influence+of+Liver+Fibrosis+on+Lobular+Zonation&btnG=).
+
+### A Consensus Transcriptional Landscape of Human End-Stage Heart Failure {.unlisted .unnumbered}
+<div data-badge-popover="right" data-badge-type="donut" data-doi="10.1101/2020.05.23.20110858" data-hide-no-mentions="true" class="altmetric-embed"></div>
+
+As of `r today()` this work gathered `r get_citation_num("Heart Failure")` citations on [Google Scholar](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=A+Consensus+Transcriptional+Landscape+of+Human+End-Stage+Heart+Failure&btnG=).
+
+```{r "reheat-stats", include=FALSE, eval = FALSE}
+reheat = access_ga(ga_property_list$ReHeat)
+
+ts = plot_timecourse(reheat) 
+m = plot_worldmap(reheat)
+cs = plot_cumsum(reheat)
+
+((ts + cs) / m) + plot_annotation(tag_levels = "A") +
+  labs(caption = str_c("as of ", today()))
+```
+
+### A functional landscape of CKD entities from public transcriptomic data {.unlisted .unnumbered}
+<div data-badge-popover="right" data-badge-type="donut" data-doi="10.1016/j.ekir.2019.11.005" data-hide-no-mentions="true" class="altmetric-embed"></div>
+
+As of `r today()` this work gathered `r get_citation_num("CKD")` citations on [Google Scholar](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=A+functional+landscape+of+CKD+entities+from+public+transcriptomic+data&btnG=).
+
+```{r "ckd-stats", eval=FALSE, include=FALSE}
+ckd = access_ga(ga_property_list$`CKD App`)
+
+ts = plot_timecourse(ckd) 
+m = plot_worldmap(ckd)
+cs = plot_cumsum(ckd)
+
+((ts + cs) / m) + plot_annotation(tag_levels = "A") +
+  labs(caption = str_c("as of ", today()))
+```
+
+### NRF2/KEAP1 in hepatocytes controls fibro- and carcinogenesis in chronic liver disease {.unlisted .unnumbered}
+
+### Imbalanced gut microbiota fuels HCC development by shaping the hepatic inflammatory microenvironment {.unlisted .unnumbered}
+
+## R-packages
+
+### dorothea {.unlisted .unnumbered}
+See Figure \@ref(fig:dorothea-bc-stats)
+```{r dorothea-gh-stats, fig.asp=0.9, fig.cap = "Visitor statistics for [_dorothea_'s GitHub page](https://saezlab.github.io/dorothea/). **A** Number of visitors per week. **B** Total number of visitors. **C** Origin of the visitors.", fig.scap = "Visitor statistics for _dorothea_'s GitHub page."}
+dorothea = access_ga(ga_property_list$dorothea)
+
+ts = plot_timecourse(dorothea) 
+m = plot_worldmap(dorothea)
+cs = plot_cumsum(dorothea)
+
+((ts + cs) / m) + plot_annotation(tag_levels = "A") + 
+  labs(caption = str_c("as of ", today()))
+```
+
+(ref:scap-dorothea-gh-stats) Performance of current Splatter simulations.
+
+(ref:dorothea-gh-stats) Performance of current Splatter simulations. Synthetic datasets were produced using parameters estimated from 500 random cells from the Tung dataset. Plot shows the rank of median absolute deviation (MAD) from the real dataset on a variety of measures from least similar (blue) to most similar (yellow). The ZINB-WaVE model best reproduces this dataset, followed by the updated BASiCS model. The Splat model also performs well despite having a less sophisticated estimation procedure.
+
+```{r dorothea-bc-stats, fig.cap = "Download statistics of the [_dorothea_ Bioconductor package](https://bioconductor.org/packages/release/data/experiment/html/dorothea.html).", fig.scap = "Download statistics of the _dorothea_ Bioconductor package"}
+bioc_stats = read_delim("https://www.bioconductor.org/packages/stats/data-experiment/dorothea/dorothea_stats.tab", 
+                        delim = "\t")
+
+bioc_stats %>%
+  filter(Month != "all") %>%
+  mutate(date = dmy(str_c("1", Month, Year, sep = " "))) %>%
+  mutate(month = month(date, label = T),
+         year = year(date)) %>%
+  ggplot(aes(x=month, y=Nb_of_downloads)) +
+  geom_col() +
+  facet_wrap(~year) +
+  labs(x = "Month of the year", y = "Number of total downloads",
+       caption = str_c("as of ", today()))
+```
+
+### progeny {.unlisted .unnumbered}
+```{r "progeny-gh-stats", fig.asp=0.9, fig.cap = "Visitor statistics for [_progeny_'s GitHub page](https://saezlab.github.io/progeny/). **A** Number of visitors per week. **B** Total number of visitors. **C** Origin of the visitors.", fig.scap = "Visitor statistics for _progeny_'s GitHub page."}
+progeny = access_ga(ga_property_list$progeny)
+
+ts = plot_timecourse(progeny) 
+m = plot_worldmap(progeny)
+cs = plot_cumsum(progeny)
+
+((ts + cs) / m) + plot_annotation(tag_levels = "A") +
+  labs(caption = str_c("as of ", today()))
+```
+
+```{r "progeny-bc-stats", fig.cap = "Download statistics of the [_progeny_ Bioconductor package](https://bioconductor.org/packages/release/bioc/html/progeny.html). Red colored bars indicate the time from which I contributed to the development.", fig.scap = "Download statistics of the _progeny_ Bioconductor package"}
+bioc_stats = read_delim("http://bioconductor.org/packages/stats/bioc/progeny/progeny_stats.tab", 
+                        delim = "\t") 
+
+bioc_stats %>%
+  filter(Month != "all") %>%
+  mutate(date = dmy(str_c("1", Month, Year, sep = " "))) %>%
+  mutate(month = month(date, label = T),
+         year = year(date)) %>%
+  mutate(c = case_when(date >= as_date("2020-05-01") ~ "yes",
+                       TRUE ~ "no")) %>%
+  ggplot(aes(x=month, y=Nb_of_downloads, fill=c)) +
+  geom_col() +
+  facet_wrap(~year) +
+  scale_fill_manual(values = aachen_color(c("black75","bordeaux"))) +
+  labs(x = "Month of the year", y = "Number of total downloads",
+       caption = str_c("as of ", today())) +
+  theme(legend.position = "none")
+```
