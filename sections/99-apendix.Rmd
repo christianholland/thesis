@@ -1,38 +1,24 @@
-<!--
-The bib chunk below must go last in this document according to how R Markdown renders.  More info is at http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
--->
+`r if(knitr:::is_latex_output()) '\\appendix'`
 
-\backmatter
-
-<!-- 
-If you'd like to change the name of the bibliography to something else,
-delete "References" and replace it.
--->
-
-# References {-}
-<!--
-This manually sets the header for this unnumbered chapter.
--->
-\markboth{References}{References}
-<!--
-To remove the indentation of the first entry.
--->
-\noindent
+`r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'` 
 
 <!--
-To create a hanging indent and spacing between entries.  These three lines may need to be removed for styles that don't require the hanging indent.
+If you feel it necessary to include an appendix, it goes here.
 -->
 
-\setlength{\parindent}{-0.20in}
-\setlength{\leftskip}{0.20in}
-\setlength{\parskip}{8pt}
 
+# The First Appendix
 
-<!--
-This is just for testing with more citations for the bibliography at the end.  Add other entries into the list here if you'd like them to appear in the bibliography even if they weren't explicitly cited in the document.
--->
+This first appendix includes all of the R chunks of code that were hidden throughout the document (using the `include = FALSE` chunk tag) to help with readibility and/or setup.
 
----
-nocite: | 
-  @angel2000, @angel2001, @angel2002a
-...
+**In the main Rmd file**
+
+```{r ref.label='include_packages', results='hide', echo = TRUE}
+```
+
+**In Chapter \@ref(ref-labels):**
+
+```{r ref.label='include_packages_2', results='hide', echo = TRUE}
+```
+
+# The Second Appendix, for Fun
