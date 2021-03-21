@@ -1,0 +1,281 @@
+This thesis is based on three manuscripts each forming a separate chapter. Two manuscripts haven been already published while the third is at the time of writing in preparation and planned to be submitted in 2021. I am the sole lead author of all three manuscripts, performing the vast majority of all analyses and drafting each manuscript. 
+
+**The following manuscripts are included as part of this thesis**
+
+For the sake of transparency the individual authors contributions are given for each manuscript, based on the Contributor Role Taxonomy (CRediT) [@brand_2015] that classifies each type of contribution into support, equal, and lead (Figures \@ref(fig:credit-transfer), \@ref(fig:credit-scbenchmark), and \@ref(fig:credit-liver)).
+
+1. **Holland CH**, Szalai B, Saez-Rodriguez J. "Transfer of regulatory knowledge
+from human to mouse for functional genomics analysis." _Biochimica et Biophysica
+Acta (BBA) - Gene Regulatory Mechanisms._ -@holland_2020. DOI:
+[10.1016/j.bbagrm.2019.194431](https://doi.org/10.1016/j.bbagrm.2019.194431).
+
+```{r credit-transfer, fig.cap = "Authors contribution to the publication \"Transfer of regulatory knowledge from human to mouse for functional genomics analysis\" based on CRediT. Colored tiles show the contribution with the levels \"supporting\" (light), \"equal\" (medium), and \"lead\" (dark)."}
+f = read_csv(here("data/my_publications/credit - transfer.csv")) %>%
+  rename(type = X1) %>%
+  mutate(type = fct_inorder(type)) %>%
+  pivot_longer(-type, names_to = "author", values_to = "category") %>%
+  mutate(author = fct_inorder(author)) %>%
+  mutate(category = factor(category, 
+                           levels = c("no","supporting", "equal", "lead"))) %>%
+  ggplot(aes(x=author, y=fct_rev(type), fill = category)) +
+  geom_tile() +
+  scale_fill_manual(values = c("white", aachen_color(c("green25","green50", 
+                                            "green")))) +
+  labs(x=NULL, y=NULL) +
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 90, hjust=1, vjust = 0.5),
+        axis.line = element_blank(),
+        panel.border = element_rect(colour = "black", fill=NA, size=1)) +
+  coord_fixed()
+
+knitr::include_graphics(here::here("figure/credit-transfer-1.png"))
+```
+
+
+2. **Holland CH**, Tanevski J, Perales-Patón J, Gleixner J, Kumar MP, Mereu E, 
+Joughin BA, Stegle O, Lauffenburger DA, Heyn H, Szalai B, Saez-Rodriguez, J. 
+"Robustness and applicability of transcription factor and pathway analysis tools 
+on single-cell RNA-seq data." _Genome Biology._ -@holland_2020a. DOI: 
+[10.1186/s13059-020-1949-z](https://doi.org/10.1186/s13059-020-1949-z).
+
+```{r credit-scbenchmark,fig.cap = "Authors contribution to the publication \"Robustness and applicability of transcription factor and pathway analysis tools on single-cell RNA-seq data\" based on CRediT. Colored tiles show the contribution with the levels \"supporting\" (light), \"equal\" (medium), and \"lead\" (dark)."}
+f = read_csv(here("data/my_publications/credit - scbenchmark.csv")) %>%
+  rename(type = X1) %>%
+  mutate(type = fct_inorder(type)) %>%
+  pivot_longer(-type, names_to = "author", values_to = "category") %>%
+  mutate(author = fct_inorder(author)) %>%
+  mutate(category = factor(category, 
+                           levels = c("no","supporting", "equal", "lead"))) %>%
+  ggplot(aes(x=author, y=fct_rev(type), fill = category)) +
+  geom_tile() +
+  scale_fill_manual(values = c("white", aachen_color(c("green25","green50", 
+                                            "green")))) +
+  labs(x=NULL, y=NULL) +
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 90, hjust=1, vjust = 0.5),
+        axis.line = element_blank(),
+        panel.border = element_rect(colour = "black", fill=NA, size=1)) +
+  coord_fixed()
+
+knitr::include_graphics(here::here("figure/credit-scbenchmark-1.png"))
+```
+
+
+3. **Holland CH**, Ramirez Flores RO, Myllys M, Hassan R, Edlund K, Hofmann U, 
+Marchan R, Cadenas C, Reinders J, Hoehme S, Seddek A, Dooley S, Keitel V, 
+Godoy P, Begher-Tibbe B, Trautwein C, Rupp C, Mueller S, Longerich T, 
+Hengstler JG^#^, Saez-Rodriguez J^#^, Ghallab A^#^. "Transcriptomic 
+cross-species analysis of chronic liver disease reveals a consistent regulation 
+pattern between humans and mice." _In preparation_. 2021.
+
+```{r credit-liver, fig.cap = "Authors contribution to the (unpublished) manuscript \"Transcriptomic cross-species analysis of chronic liver disease reveals a consistent regulation pattern between humans and mice\" based on CRediT. Colored tiles show the contribution with the levels \"supporting\" (light), \"equal\" (medium), and \"lead\" (dark)."}
+f = read_csv(here("data/my_publications/credit - liver.csv")) %>%
+  rename(type = X1) %>%
+  mutate(type = fct_inorder(type)) %>%
+  pivot_longer(-type, names_to = "author", values_to = "category") %>%
+  mutate(category = replace_na(category, "no")) %>%
+  mutate(author = fct_inorder(author)) %>%
+  mutate(category = factor(category, 
+                           levels = c("no","supporting", "equal", "lead"))) %>%
+  ggplot(aes(x=author, y=fct_rev(type), fill = category)) +
+  geom_tile() +
+  scale_fill_manual(values = c("white", aachen_color(c("green25","green50", 
+                                            "green")))) +
+  labs(x=NULL, y=NULL) +
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 90, hjust=1, vjust = 0.5),
+        axis.line = element_blank(),
+        panel.border = element_rect(colour = "black", fill=NA, size=1)) +
+  coord_fixed()
+
+knitr::include_graphics(here::here("figure/credit-liver-1.png"))
+```
+
+**Other publications that I have contributed to but are not presented in this thesis**
+
+Next to these three main projects, I contributed during my candidature also to several other projects that are not directly related to the topic of this thesis, but still made up an essential part of my Ph.D.
+
+1. Garcia-Alonso L, **Holland CH**, Ibrahim MM, Turei D, Saez-Rodriguez J. 
+"Benchmark and integration of resources for the estimation of human 
+transcription factor activities." _Genome Research._ -@garciaalonso_2019. DOI:
+[10.1101/gr.240663.118](https://doi.org/10.1101/gr.240663.118).
+
+2. Szalai B, Subramanian V, **Holland CH**, Alföldi R, Puskás LG, Saez-Rodriguez 
+J. "Signatures of cell death and proliferation in perturbation transcriptomics 
+data - from confounding factor to effective prediction." 
+_Nucleic Acids Research._ -@szalai_2019. DOI: 
+[10.1093/nar/gkz805](https://doi.org/10.1093/nar/gkz805).
+
+3. Ghallab A, Myllys M, **Holland CH**, Zaza A, Murad W, Hassan R, Ahmed YA, 
+Abbas T, Abdelrahim EA, Schneider KM, Matz-Soja M, Reinders J, Gebhardt R, 
+Berres ML, Hatting M, Drasdo D, Saez-Rodriguez J, Trautwein C, Hengstler JG. 
+"Influence of Liver Fibrosis on Lobular Zonation." _Cells._ -@ghallab_2019a. DOI: 
+[10.3390/cells8121556](https://doi.org/10.3390/cells8121556).
+
+4. Tajti F^\*^, Kuppe C^\*^, Antoranz A, Ibrahim MM, Kim H, Ceccarelli F, **Holland CH**, 
+Olauson H, Floege J, Alexopoulos LG, Kramann R, Saez-Rodriguez J. "A functional 
+landscape of chronic kidney disease entities from public transcriptomic data." 
+_Kidney International Reports._ -@tajti_2020. DOI: 
+[10.1016/j.ekir.2019.11.005](https://doi.org/10.1016/j.ekir.2019.11.005).
+
+5. Mohs A, Otto T, Schneider KM, Peltzer M, Boekschoten M, **Holland CH**, 
+Hudert CA, Kalveram L, Wiegand S, Saez-Rodriguez J, Longerich T, Hengstler JG, 
+Trautwein C. "Hepatocyte-specific NRF2 activation controls fibrogenesis and 
+carcinogenesis in steatohepatitis." _Journal of Hepatology_. -@mohs_2020. DOI: [10.1016/j.jhep.2020.09.037](https://doi.org/10.1016/j.jhep.2020.09.037).
+
+6. Ramirez Flores RO^\*^, Lanzer JD^\*^, **Holland CH**, Leuschner F, Most P, 
+Schultz J-H, Levinson RT^#^, Saez-Rodriguez J^#^. "A Consensus Transcriptional 
+Landscape of Human End-Stage Heart Failure." 
+_Journal of the American Heart Association_. 2021. DOI: 
+[10.1161/JAHA.120.019667](https://doi.org/10.1161/JAHA.120.019667)
+
+7. Robrahn L, Dupont A, Jumpertz S, Zhang K, **Holland CH**, Guillaume J, 
+Rappold S, Cerovic V, Saez-Rodriguez J, Hornef MW, Cramer T. "Conditional 
+deletion of HIF-1a provides new insight regarding the murine response to 
+gastrointestinal infection with Salmonella Typhimurium." 
+_Submitted to Journal of Leukocyte Biology_. 2021. Preprint available at _bioRxiv._ [-@robrahn_2021]. DOI:
+[10.1101/2021.01.16.426940](https://doi.org/10.1101/2021.01.16.426940).
+
+8. López-Domínguez R, Toro-Domínguez D, Martorell-Marugán J, García-Morena A,
+**Holland CH**, Saez-Rodriguez J, Goldman D, Petri M, Alarcón-Riquelme ME,
+Carmona-Sáez P. "Transcription Factor Activity Inference in Systemic Lupus 
+Erythematosus." _Submitted to Life_. 2021.
+
+9. Schneider KM^\*^, Mohs A^\*^, Gui W, Galvez EJC, Candels LS, **Holland CH**, 
+Elfers C, Kilic K, Schneider CV, Strnad P, Wirtz TH, Marschall HU, Latz E, 
+Lelouvier B, Saez-Rodriguez J, de Vos W, Strowig T, Trebicka J and Trautwein C. 
+"Imbalanced gut microbiota fuels HCC development by shaping the hepatic 
+inflammatory microenvironment." _Under review at Nature Communications_. 2021.
+
+^\*^_Shared first authorship_ 
+^#^_Shared senior authorship_
+
+All of these fruitful and successful collaborations, which I have either led or contributed to, have made it possible for me to meet many fantastic scientists around the world, as illustrated in my collaboration network (Figure \@ref(fig:collaboration-network)). This list of people is by no means exhaustive but just highlights the personal known collaborators with whom I have published scientific articles. 
+
+```{r collaboration-network, fig.width=8, fig.height = 5, fig.cap = "My Ph.D. collaboration network. Edge width corresponds to the number of shared publications. As my supervisor Julio Saez-Rodriguez was involved in all collaborations we are represented in the network by a single node."}
+relevant_authors <- c(
+  "Garcia-Alonso", "Ibrahim", "Turei", "Tanevski", "Perales", "Szalai",
+  "Subramanian", "Tajti", "Kim", "Ceccarelli", "Ramirez", "Lanzer", "Levinson",
+  "Ghallab", "Mohs", "Joughin", "Trautwein", "Turei", "Lauffenburger", "Mereu",
+  "Heyn", "Hengstler", "Gleixner", "Schneider", "Kumar", "Berres", "Stegle",
+  "Holland", "Robrahn", "Cramer"
+)
+
+author_type <- tibble(last_name = c(
+  "Garcia-Alonso", "Ibrahim", "Turei", "Saez-Rodriguez", "Tanevski", "Perales",
+  "Szalai", "Subramanian", "Tajti", "Kim", "Ceccarelli", "Ramirez", "Lanzer",
+  "Levinson", "Holland"
+)) %>%
+  mutate(class = "internal")
+
+# parse bibtex file and filter for relevant authors
+pubs <- bib2df(here("data/my_publications/my_publications.bib")) %>%
+  select(title = TITLE, journal = JOURNAL, author = AUTHOR) %>%
+  unnest(author) %>%
+  mutate(author = case_when(
+    str_detect(author, "Perales") ~ "Javier Perales",
+    str_detect(author, "Flores") ~ "Ricardo Ramirez",
+    TRUE ~ author
+  )) %>%
+  filter(str_detect(author, str_c(relevant_authors, collapse = "|")))
+
+# assign an unique id to each author
+author_ids <- pubs %>%
+  unnest(author) %>%
+  distinct(author) %>%
+  arrange(author) %>%
+  mutate(id = row_number())
+
+# build edge data frame
+authors_combination <- pubs %>%
+  group_by(title) %>%
+  group_modify(~ {
+    .x %>%
+      arrange(author) %>%
+      pull(author) %>%
+      combn(., m = 2) %>%
+      t() %>%
+      data.frame() %>%
+      as_tibble()
+  }) %>%
+  ungroup() %>%
+  left_join(
+    rename(author_ids, X1 = author, from = id)
+  ) %>%
+  left_join(
+    rename(author_ids, X2 = author, to = id)
+  )
+
+edge_df <- authors_combination %>%
+  count(X1, X2, from, to) %>%
+  # only highlight multiple co-author ships that are connected to me
+  mutate(n = case_when(
+    str_detect(X1, "Holland") | str_detect(X2, "Holland") ~ n,
+    TRUE ~ as.integer(1)
+  )) %>%
+  mutate(n = ordered(n))
+
+# extract last name of authors
+last_names <- author_ids$author %>%
+  str_split(pattern = " ", simplify = F) %>%
+  map(tail, 1) %>%
+  flatten_chr()
+
+# build nodes data frame
+author_df <- author_ids %>%
+  mutate(last_name = last_names) %>%
+  left_join(author_type, by = "last_name") %>%
+  replace_na(list(class = "external")) %>%
+  mutate(class = fct_rev(str_to_title(class))) %>%
+  mutate(
+    nchars = nchar(last_name),
+    name_lenght = case_when(
+      nchars >= 10 ~ "long",
+      TRUE ~ "short"
+    )
+  )
+
+g <- tbl_graph(nodes = author_df, edges = edge_df) %>%
+  mutate(centrality = centrality_degree()) %>%
+  mutate(last_name = case_when(last_name == "Holland" ~ "Holland\nSaez-Rodriguez",
+                         TRUE ~ last_name))
+
+set.seed(123)
+g %>%
+  ggraph(layout = "fr") +
+  geom_edge_link(aes(edge_width = n), show.legend = FALSE) +
+  # geom_node_point(size = 0, aes(colour = centrality, shape = class),
+  #                 show.legend = TRUE) +
+  # geom_node_text(aes(label = last_name), colour = "black", vjust = 0.4) +
+  geom_node_label(aes(label = last_name, fill = class, 
+                      size = as_factor(name_lenght)), colour = "white") +
+  # geom_label(aes(fill = factor(cyl)), colour = "white", fontface = "bold")
+  theme_graph() +
+  scale_edge_width_discrete(range = c(0.25, 1.5)) +
+  scale_color_gradient(
+    low = aachen_color("orange"),
+    high = aachen_color("bordeaux")
+  ) +
+  scale_fill_manual(values = aachen_color(c("bordeaux", "blue"))) +
+  # scale_fill_gradient(low = aachen_color("orange"),
+  #                      high = aachen_color("bordeaux")) +
+  # scale_shape_manual(values = c(15,19)) +
+  scale_size_manual(values = c(4, 3), guide = "none") +
+  theme(
+    legend.position = "top",
+    legend.key.size = unit(0.75, "line"),
+    plot.margin = margin(t = 0.5, b = 0.5)
+    # panel.background = element_rect(fill = "lightblue")
+  ) +
+  guides(
+    edge_width = FALSE,
+    # shape = guide_legend(override.aes = list(size = 5)),
+    fill = guide_legend(
+      title = "Collaboration type",
+      override.aes = aes(label = ""),
+      nrow = 1,
+      title.position = "top",
+      title.hjust = 0.5
+    )
+  )
+```

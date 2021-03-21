@@ -1,6 +1,6 @@
 ---
 # +-----Title------------------------------------------------------------------+
-title: "My final PhD thesis"
+title: "Functional analysis of transcriptome data in the context of chronic liver diseases - From gene expression to pathway and transcription factor activities"
 
 # +-----Author-----------------------------------------------------------------+
 author: "Christian H. Holland"
@@ -10,46 +10,54 @@ birthplace: "Jülich, Germany"
 
 # +-----Supervisors------------------------------------------------------------+
 advisor: "Prof. Dr. Ursula Klingmüller"
-coadvisor: "Prof. Dr. Julio Saez-Rodriguez"
+altadvisor: "Prof. Dr. Julio Saez-Rodriguez"
 
 # +-----Dates------------------------------------------------------------+
-submissionmonth: "December"
-submissionyear: "2020"
-defense: "01.01.2019"
-knit: "bookdown::render_book"
-site: bookdown::bookdown_site
-output: 
-  # hdlbrgdown::thesis_pdf: default
-  hdlbrgdown::thesis_gitbook: default
-  # hdlbrgdown::thesis_word: default
-  # hdlbrgdown::thesis_epub: default
+submissionmonth: "June"
+submissionyear: "2021"
+defense: "01.07.2021"
 
+knit: bookdown::render_book
+site: bookdown::bookdown_site
+
+header-includes:
+   - \usepackage[parfill]{parskip}
+
+# This will automatically install the {remotes} package and {thesisdown}
+# Change this to FALSE if you'd like to install them manually on your own.
+params:
+  'Install needed packages for {thesisdown}': True
   
+# Remove the hashtag to specify which version of output you would like.
+# Can only choose one at a time.
+output:
+  # thesisdown::thesis_pdf:
+  #     toc_depth: 2
+  thesisdown::thesis_gitbook: default
+#  thesisdown::thesis_word: default
+#  thesisdown::thesis_epub: default
+
+# If you are creating a PDF you'll need to write your preliminary content 
+# (e.g., abstract, acknowledgements) below or use code similar to line 25-26 
+# for the .RMD files. If you are NOT producing a PDF, delete or silence
+# lines 25-39 in this YAML header.
+abstract: '`r if(knitr:::is_latex_output()) paste(readLines(here::here("prelims", "abstract.Rmd")), collapse = "\n  ")`'
+# preface: |
+#   This is an example of a thesis setup to use the reed thesis document class 
+#   (for LaTeX) and the R bookdown package, in general.
 # Specify the location of the bibliography below
 bibliography: bib/references.bib
-link-citations: yes
 # Download your specific csl file and refer to it in the line below.
-# csl: style/apa.csl
-lot: true
-lof: true
-# If you prefer blank lines between paragraphs, un-silence lines  40-41 (this requires package tikz)
-#header-includes:
-#- \usepackage{tikz}
+csl: csl/apa.csl
+lot: false
+lof: false
 ---
 
-<!-- abstract: | -->
-<!--   `r if(knitr:::is_latex_output()) paste(readLines("sections/001-abstract.Rmd"), collapse = "\n  ")` -->
-<!-- declaration: | -->
-<!--   `r if(knitr:::is_latex_output()) paste(readLines("sections/002-declaration.Rmd"), collapse = "\n  ")` -->
-<!-- preface: | -->
-<!--   `r if(knitr:::is_latex_output()) paste(readLines("sections/003-preface.Rmd"), collapse = "\n  ")` -->
-<!-- acknowledgements: | -->
-<!--   `r if(knitr:::is_latex_output()) paste(readLines("sections/004-acknowledge.Rmd"), collapse = "\n  ")` -->
-
 <!--
-Above is the YAML (YAML Ain't Markup Language) header that includes a lot of metadata used to produce the document.  Be careful with spacing in this header!
+Above is the YAML (YAML Ain't Markup Language) header that includes a lot of 
+metadata used to produce the document.  Be careful with spacing in this header!
 
-If you'd prefer to not include a Dedication, for example, simply delete the section entirely, or silence (add #) them. 
+If you'd prefer to not include a Dedication, for example, simply delete the section entirely, or silence them (add # before each line). 
 
 If you have other LaTeX packages you would like to include, delete the # before header-includes and list the packages after hyphens on new lines.
 
@@ -58,18 +66,7 @@ If you'd like to include a comment that won't be produced in your resulting file
 If you receive a duplicate label error after knitting, make sure to delete the index.Rmd file and then knit again.
 -->
 
-```{r include_packages, include = FALSE}
-# This chunk ensures that the hdlbrgdown package is
-# installed and loaded. This hdlbrgdown package includes
-# the template files for the thesis.
-if(!require(devtools))
-  install.packages("devtools", repos = "http://cran.rstudio.com")
-if(!require(hdlbrgdown))
-  devtools::install_github("christianholland/hdlbrgdown")
-library(hdlbrgdown)
-```
-
-```{r knitr config}
+```{r knitr-config, include=FALSE}
 knitr::opts_chunk$set(
   echo      = FALSE,
   warning   = FALSE,
@@ -79,8 +76,42 @@ knitr::opts_chunk$set(
   fig.ext   = "png",
   fig.path  = "figures/",
   fig.align = "center",
-  out.width = "80%"
+  out.width = "80%",
+  dev = "png",
+  dpi = 300
 )
+```
+
+```{r include-packages, include=FALSE}
+# This chunk ensures that the thesisdown package is
+# installed and loaded. This thesisdown package includes
+# the template files for the thesis.
+if (!require(remotes)) {
+  if (params$`Install needed packages for {thesisdown}`) {
+    install.packages("remotes", repos = "https://cran.rstudio.com")
+  } else {
+    stop(
+      paste('You need to run install.packages("remotes")",
+            "first in the Console.')
+    )
+  }
+}
+if (!require(thesisdown)) {
+  if (params$`Install needed packages for {thesisdown}`) {
+    remotes::install_github("ismayc/thesisdown")
+  } else {
+    stop(
+      paste(
+        "You need to run",
+        'remotes::install_github("ismayc/thesisdown")',
+        "first in the Console."
+      )
+    )
+  }
+}
+library(thesisdown)
+# Set how wide the R output will go
+options(width = 70)
 ```
 
 ```{r libraries}
@@ -93,12 +124,21 @@ library(patchwork)
 library(RColorBrewer)
 library(maps)
 library(AachenColorPalette) # devtools::install_github("christianholland/AachenColorPalette")
+library(tidygraph)
+library(ggraph)
+library(ggrepel)
+library(scales)
+# library(magick)
+library(cowplot)
+
+theme_set(theme_cowplot())
 
 # Strings
 library(stringr)
 
 # File IO
 library(readr)
+library(bib2df)
 
 # Presentation
 library(knitr)
@@ -111,49 +151,46 @@ library(forcats)
 
 # Tables
 library(tibble)
+library(kableExtra)
 
 # Dates
 library(lubridate)
 
 # APIs
 library(scholar)
-library(googleAnalyticsR)
-```
+# library(googleAnalyticsR)
 
+```
 
 ```{r functions}
 my_today = function() {
   format(Sys.time(), '%d %B %Y')
 }
 ```
-
-```{r source}
-# a place to source additional scripts
-```
-
-```{r doctype}
-tex  <- TRUE
-docx <- FALSE
-html <- FALSE
-if (!knitr:::is_latex_output()) {
-    tex <- FALSE
-    if (knitr:::is_html_output()) {
-        html <- TRUE
-    } else {
-        docx <- TRUE
-    }
-}
-```
-
-
-<!-- On ordering the chapter files:
-There are two options:
-1. Name your chapter files in the order in which you want them to appear (e.g., 01-Inro, 02-Data, 03-Conclusions). 
-2. Otherwise, you can specify the order in which they appear in the _bookdown.yml (for PDF only).
-
-Do not include 00(two-hyphens)prelim.Rmd and 00-abstract.Rmd in the YAML file--they are handled in the YAML above differently for the PDF version.
+<!--
+The acknowledgments, preface, dedication, and abstract are added into the PDF
+version automatically by inputting them in the YAML at the top of this file.
+Alternatively, you can put that content in files like 00--prelim.Rmd and
+00-abstract.Rmd like done below.
 -->
 
-<!-- The {.unnumbered} option here means that the introduction will be "Chapter 0." You can also use {-} for no numbers
-on chapters.
+`r if(!knitr:::is_latex_output()) '# Front matter {-}'`
+
+## Preface {-}
+```{r child=here::here("prelims", "preface.Rmd")}
+
+```
+
+## Acknowledgements {-}
+```{r child=here::here("prelims", "acknowledgements.Rmd")}
+
+```
+
+`r if(!knitr:::is_latex_output()) '## Abstract {-}'`
+```{r eval=!knitr::is_latex_output(), child=here::here("prelims", "abstract.Rmd")}
+
+```
+
+<!-- The {.unnumbered} option here means that the introduction will be 
+"Chapter 0." You can also use {-} for no numbers on chapters.
 -->

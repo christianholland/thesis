@@ -1,0 +1,13 @@
+Organism;Damage;Treatment;N;Accession ID
+Mouse;Chronic;CCl4 (Up to 12 months);36;GSE167216
+Mouse;Acute;APAP (Up to 16 days);49;GSE167032
+Mouse;Acute;CCl4 (Up to 16 days);46;GSE167033
+Mouse;Acute;PH (Up to 3 months);52;GSE167034
+Mouse;Acute;BDL (Up to 3 weeks);29;GSE166867
+Mouse;Acute;LPS (24 hours);8;GSE166488
+Mouse;Acute;Tunicamycin (6 hours);7;GSE29929
+Human;Chronic;Mild vs advanced NAFLD;72;GSE49541
+Human;Chronic;Full-spectrum of NAFLD;78;GSE130970
+Human;Chronic;NAFLD and NASH;46;GSE48452
+Human;Chronic;NASH, NAFLD, PBC and PSC;109;GSE61260
+Human;Chronic;HCV and NAFLD;67;E-MTAB-6863
