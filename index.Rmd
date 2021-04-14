@@ -31,9 +31,9 @@ params:
 # Remove the hashtag to specify which version of output you would like.
 # Can only choose one at a time.
 output:
-  thesisdown::thesis_pdf:
-      toc_depth: 2
-  # thesisdown::thesis_gitbook: default
+  # thesisdown::thesis_pdf:
+  #     toc_depth: 2
+  thesisdown::thesis_gitbook: default
 #  thesisdown::thesis_word: default
 #  thesisdown::thesis_epub: default
 
