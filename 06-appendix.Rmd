@@ -2,7 +2,7 @@
 
 `r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'` 
 
-# Cross-species
+# Transfer of regulatory knowledge from human to mouse for functional genomics analysis
 ## Supplementary Figures
 ```{r transfer-sfig-1, fig.cap = "Results of pathway-wise ROC-curves analysis. The dashed line indicate the performance of a random model. Missing mouse or human ROC-curves are due to missing benchmark data for the corresponding pathway."}
 knitr::include_graphics(here::here("data/conserved_footprints/FigureS1.png"))
@@ -24,7 +24,7 @@ knitr::include_graphics(here::here("data/conserved_footprints/FigureS4.png"))
 knitr::include_graphics(here::here("data/conserved_footprints/FigureS5.png"))
 ```
 
-# scbenchmark 
+# Robustness and applicability of transcription factor and pathway analysis tools on single-cell RNA-seq data 
 ## Supplementary Figures
 ```{r scbench-fig-s1, fig.cap = "a Workflow to induce low gene coverage with a subsequent benchmark of the tools PROGENy, DoRothEA and GO-GSEA against low gene coverage. b,c,e Scatterplot showing how well AUROC and AUPRC of b DoRothEA (AB), c PROGENy with 100 footprint genes per pathway, and GO-GSEA are correlated. The labels correspond to the gene coverages. d Mapping table between PROGENy pathways and GO terms/GO IDs."}
 knitr::include_graphics(here::here("data/sc_benchmark/SFigure1.png"))
@@ -87,7 +87,7 @@ knitr::include_graphics(here::here("data/sc_benchmark/SFigure15.png"))
 ```
 
 
-# Liver disease
+# Transcriptomic cross-species analysis of chronic liver disease reveals a consistent regulation pattern between humans and mice
 ## Supplementary Material and Methods {#liver-smm}
 ### Collecting, curating, and processing publicly available genome-wide transcriptomics data
 The raw data of the publicly available genome-wide transcriptomic studies (.CEL files for microarrays and count matrices for RNA-seq) were downloaded from Gene Expression Omnibus (GEO; @edgar_2002) and ArrayExpress [@kauffmann_2009]. For the respective accession, identifier see Table \@ref(tab:liver-tab-1). Associated metadata was manually collected or accessed via the R/Bioconductor package GEOquery (version 2.56.0; @davis_2007). To further process the raw data of microarrays and RNA-seq a suite of different Bioconductor packages [@gentleman_2004] was used. 
