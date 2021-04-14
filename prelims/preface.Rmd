@@ -1,4 +1,4 @@
-This thesis is based on three manuscripts each forming a separate chapter. Two manuscripts haven been already published while the third is at the time of writing in preparation and planned to be submitted in 2021. I am the sole lead author of all three manuscripts, performing the vast majority of all analyses and drafting each manuscript. 
+This thesis is based on three manuscripts each forming a separate chapter. Two manuscripts haven been already published while the third is at the time of writing in preparation and planned to be submitted in 2021. I am the sole lead author of all three manuscripts, performing the vast majority of all computational analyses and drafting each manuscript. 
 
 **The following manuscripts are included as part of this thesis**
 
@@ -124,22 +124,23 @@ Trautwein C. "Hepatocyte-specific NRF2 activation controls fibrogenesis and
 carcinogenesis in steatohepatitis." _Journal of Hepatology_. -@mohs_2020. DOI: [10.1016/j.jhep.2020.09.037](https://doi.org/10.1016/j.jhep.2020.09.037).
 
 6. Ramirez Flores RO^\*^, Lanzer JD^\*^, **Holland CH**, Leuschner F, Most P, 
-Schultz J-H, Levinson RT^#^, Saez-Rodriguez J^#^. "A Consensus Transcriptional 
+Schultz J-H, Levinson RT^#^, Saez-Rodriguez J^#^. "Consensus Transcriptional 
 Landscape of Human End-Stage Heart Failure." 
-_Journal of the American Heart Association_. 2021. DOI: 
-[10.1161/JAHA.120.019667](https://doi.org/10.1161/JAHA.120.019667)
+_Journal of the American Heart Association_. -@ramirezflores_2021. DOI: 
+[10.1161/JAHA.120.019667](https://doi.org/10.1161/JAHA.120.019667).
 
-7. Robrahn L, Dupont A, Jumpertz S, Zhang K, **Holland CH**, Guillaume J, 
+7. Lopez-Dominguez R, Toro-Dominguez D, Martorell-Marugan J, Garcia-Moreno A,
+**Holland CH**, Saez-Rodriguez J, Goldman D, Petri M, Alarcón-Riquelme ME^#^,
+Carmona-Sáez P^#^.Transcription Factor Activity Inference in Systemic Lupus
+Erythematosus." _Life_. -@lopezdominguez_2021. DOI: 
+[10.3390/life11040299](https://doi.org/10.3390/life11040299).
+
+8. Robrahn L, Dupont A, Jumpertz S, Zhang K, **Holland CH**, Guillaume J, 
 Rappold S, Cerovic V, Saez-Rodriguez J, Hornef MW, Cramer T. "Conditional 
 deletion of HIF-1a provides new insight regarding the murine response to 
-gastrointestinal infection with Salmonella Typhimurium." 
-_Submitted to Journal of Leukocyte Biology_. 2021. Preprint available at _bioRxiv._ [-@robrahn_2021]. DOI:
+gastrointestinal infection with Salmonella Typhimurium." _bioRxiv._ 
+-@robrahn_2021. DOI: 
 [10.1101/2021.01.16.426940](https://doi.org/10.1101/2021.01.16.426940).
-
-8. López-Domínguez R, Toro-Domínguez D, Martorell-Marugán J, García-Morena A,
-**Holland CH**, Saez-Rodriguez J, Goldman D, Petri M, Alarcón-Riquelme ME,
-Carmona-Sáez P. "Transcription Factor Activity Inference in Systemic Lupus 
-Erythematosus." _Submitted to Life_. 2021.
 
 9. Schneider KM^\*^, Mohs A^\*^, Gui W, Galvez EJC, Candels LS, **Holland CH**, 
 Elfers C, Kilic K, Schneider CV, Strnad P, Wirtz TH, Marschall HU, Latz E, 
@@ -158,7 +159,7 @@ relevant_authors <- c(
   "Subramanian", "Tajti", "Kim", "Ceccarelli", "Ramirez", "Lanzer", "Levinson",
   "Ghallab", "Mohs", "Joughin", "Trautwein", "Turei", "Lauffenburger", "Mereu",
   "Heyn", "Hengstler", "Gleixner", "Schneider", "Kumar", "Berres", "Stegle",
-  "Holland", "Robrahn", "Cramer"
+  "Holland", "Robrahn", "Cramer", "Carmona-Saez"
 )
 
 author_type <- tibble(last_name = c(
