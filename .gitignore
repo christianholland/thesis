@@ -18,3 +18,5 @@ figures/
 # google docs
 sections/*.gdoc
 
+data/my_publications/credit.gsheet
+

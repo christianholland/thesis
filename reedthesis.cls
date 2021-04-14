@@ -278,6 +278,16 @@
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
+\newenvironment{zusammenfassung}{%
+  \if@twocolumn
+    \@restonecoltrue\onecolumn
+  \else
+    \@restonecolfalse
+  \fi
+  \chapter*{Zusammenfassung}
+  \fontsize{12}{14}\selectfont
+}{\clearpage \if@restonecol\twocolumn\fi}%
+
 \newenvironment{dedication}{%
   \if@twocolumn
     \@restonecoltrue\onecolumn
@@ -332,6 +342,10 @@
     Referees: & {\@advisor}\\
               & {\@altadvisor}
   \end{tabular}
+  \newpage
+  \thispagestyle{empty}
+  \textcopyright  2021 {\@author}\\ 
+  All rights reserved.
 }}
 
 % From JSS
@@ -340,6 +354,7 @@
 %\newcommand{\Shorttitle}[1]{\def\@Shorttitle{#1}}
 \newcommand{\Plainauthor}[1]{\def\@Plainauthor{#1}}
 \newcommand{\Abstract}[1]{\def\@Abstract{#1}}
+\newcommand{\Zusammenfassung}[1]{\def\@Zusammenfassung{#1}}
 %\newcommand{\Keywords}[1]{\def\@Keywords{#1}}
 %\newcommand{\Plainkeywords}[1]{\def\@Plainkeywords{#1}}
 \newcommand{\Acknowledgements}[1]{\def\@Acknowledgements{#1}}
