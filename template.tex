@@ -172,6 +172,10 @@ $preface$
 $abstract$
 }
 
+\Zusammenfassung{
+$zusammenfassung$
+}
+
 $for(header-includes)$
 	$header-includes$
 $endfor$
@@ -222,6 +226,12 @@ $if(abstract)$
   \begin{abstract}
     $abstract$
   \end{abstract}
+$endif$
+
+$if(zusammenfassung)$
+  \begin{zusammenfassung}
+    $zusammenfassung$
+  \end{zusammenfassung}
 $endif$
 
 $if(dedication)$
