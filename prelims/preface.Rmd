@@ -1,8 +1,8 @@
-This thesis is based on three manuscripts each forming a separate chapter. Two manuscripts haven been already published while the third is at the time of writing in preparation and planned to be submitted in 2021. I am the sole lead author of all three manuscripts, performing the vast majority of all computational analyses and drafting each manuscript. 
+This thesis is based on three manuscripts each forming a separate chapter. Two manuscripts have been already published while the third is at the time of writing in preparation and planned to be submitted in 2021. I am the sole lead author of all three manuscripts, performing the vast majority of all computational analyses and drafting each manuscript. 
 
 **The following manuscripts are included as part of this thesis**
 
-For the sake of transparency the individual authors contributions are given for each manuscript, based on the Contributor Role Taxonomy (CRediT) [@brand_2015] that classifies each type of contribution into support, equal, and lead (Figures \@ref(fig:credit-transfer), \@ref(fig:credit-scbenchmark), and \@ref(fig:credit-liver)).
+For the sake of transparency the individual authors contributions are given for each manuscript, based on the Contributor Role Taxonomy (CRediT, @brand_2015) that classifies each type of contribution into support, equal, and lead (Figures \@ref(fig:credit-transfer), \@ref(fig:credit-scbenchmark), and \@ref(fig:credit-liver)).
 
 1. **Holland CH**, Szalai B, Saez-Rodriguez J. "Transfer of regulatory knowledge
 from human to mouse for functional genomics analysis." _Biochimica et Biophysica

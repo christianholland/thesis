@@ -192,10 +192,10 @@ Alternatively, you can put that content in files like 00--prelim.Rmd and
 
 ```
 
-`r if(!knitr:::is_latex_output()) '## Zusmmenfassung {-}'`
-```{r eval=!knitr::is_latex_output(), child=here::here("prelims", "zusammenfassung.Rmd")}
+<!-- `r if(!knitr:::is_latex_output()) '## Zusmmenfassung {-}'` -->
+<!-- ```{r eval=!knitr::is_latex_output(), child=here::here("prelims", "zusammenfassung.Rmd")} -->
 
-```
+<!-- ``` -->
 
 <!-- The {.unnumbered} option here means that the introduction will be 
 "Chapter 0." You can also use {-} for no numbers on chapters.
