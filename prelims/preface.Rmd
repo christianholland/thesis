@@ -1,14 +1,15 @@
-This thesis is based on three manuscripts each forming a separate chapter. Two manuscripts have been already published while the third is at the time of writing in preparation and planned to be submitted in 2021. I am the sole lead author of all three manuscripts, performing the vast majority of all computational analyses and drafting each manuscript. 
+This work is based on three published manuscripts, each forming a separate chapter. I am the sole lead author as I have done the vast majority of all computational analysis and written every draft myself.
 
 **The following manuscripts are included as part of this thesis**
 
-For the sake of transparency the individual authors contributions are given for each manuscript, based on the Contributor Role Taxonomy (CRediT, @brand_2015) that classifies each type of contribution into support, equal, and lead (Figures \@ref(fig:credit-transfer), \@ref(fig:credit-scbenchmark), and \@ref(fig:credit-liver)).
+<!-- For the sake of transparency the individual authors contributions are given for each manuscript, based on the Contributor Role Taxonomy (CRediT, @brand_2015) that classifies each type of contribution into support, equal, and lead (Figures \@ref(fig:credit-transfer), \@ref(fig:credit-scbenchmark), and \@ref(fig:credit-liver)). -->
 
 1. **Holland CH**, Szalai B, Saez-Rodriguez J. "Transfer of regulatory knowledge
 from human to mouse for functional genomics analysis." _Biochimica et Biophysica
 Acta (BBA) - Gene Regulatory Mechanisms._ -@holland_2020. DOI:
 [10.1016/j.bbagrm.2019.194431](https://doi.org/10.1016/j.bbagrm.2019.194431).
 
+<!--
 ```{r credit-transfer, fig.cap = "Authors contribution to the publication \"Transfer of regulatory knowledge from human to mouse for functional genomics analysis\" based on CRediT. Colored tiles show the contribution with the levels \"supporting\" (light), \"equal\" (medium), and \"lead\" (dark)."}
 f = read_csv(here("data/my_publications/credit - transfer.csv")) %>%
   rename(type = X1) %>%
@@ -30,14 +31,14 @@ f = read_csv(here("data/my_publications/credit - transfer.csv")) %>%
 
 knitr::include_graphics(here::here("figure/credit-transfer-1.png"))
 ```
-
+-->
 
 2. **Holland CH**, Tanevski J, Perales-Patón J, Gleixner J, Kumar MP, Mereu E, 
 Joughin BA, Stegle O, Lauffenburger DA, Heyn H, Szalai B, Saez-Rodriguez, J. 
 "Robustness and applicability of transcription factor and pathway analysis tools 
 on single-cell RNA-seq data." _Genome Biology._ -@holland_2020a. DOI: 
 [10.1186/s13059-020-1949-z](https://doi.org/10.1186/s13059-020-1949-z).
-
+<!--
 ```{r credit-scbenchmark,fig.cap = "Authors contribution to the publication \"Robustness and applicability of transcription factor and pathway analysis tools on single-cell RNA-seq data\" based on CRediT. Colored tiles show the contribution with the levels \"supporting\" (light), \"equal\" (medium), and \"lead\" (dark)."}
 f = read_csv(here("data/my_publications/credit - scbenchmark.csv")) %>%
   rename(type = X1) %>%
@@ -59,15 +60,14 @@ f = read_csv(here("data/my_publications/credit - scbenchmark.csv")) %>%
 
 knitr::include_graphics(here::here("figure/credit-scbenchmark-1.png"))
 ```
-
+-->
 
 3. **Holland CH**, Ramirez Flores RO, Myllys M, Hassan R, Edlund K, Hofmann U, 
 Marchan R, Cadenas C, Reinders J, Hoehme S, Seddek A, Dooley S, Keitel V, 
 Godoy P, Begher-Tibbe B, Trautwein C, Rupp C, Mueller S, Longerich T, 
 Hengstler JG^#^, Saez-Rodriguez J^#^, Ghallab A^#^. "Transcriptomic 
-cross-species analysis of chronic liver disease reveals a consistent regulation 
-pattern between humans and mice." _In preparation_. 2021.
-
+cross-species analysis of chronic liver disease reveals consistent regulation between humans and mice." _Hepatology Communications_. -@holland_2021. DOI: [10.1002/hep4.1797](https://doi.org/10.1002/hep4.1797).
+<!--
 ```{r credit-liver, fig.cap = "Authors contribution to the (unpublished) manuscript \"Transcriptomic cross-species analysis of chronic liver disease reveals a consistent regulation pattern between humans and mice\" based on CRediT. Colored tiles show the contribution with the levels \"supporting\" (light), \"equal\" (medium), and \"lead\" (dark)."}
 f = read_csv(here("data/my_publications/credit - liver.csv")) %>%
   rename(type = X1) %>%
@@ -90,6 +90,7 @@ f = read_csv(here("data/my_publications/credit - liver.csv")) %>%
 
 knitr::include_graphics(here::here("figure/credit-liver-1.png"))
 ```
+-->
 
 **Other publications that I have contributed to but are not presented in this thesis**
 
@@ -144,28 +145,31 @@ gastrointestinal infection with Salmonella Typhimurium." _bioRxiv._
 
 9. Schneider KM^\*^, Mohs A^\*^, Gui W, Galvez EJC, Candels LS, **Holland CH**, 
 Elfers C, Kilic K, Schneider CV, Strnad P, Wirtz TH, Marschall HU, Latz E, 
-Lelouvier B, Saez-Rodriguez J, de Vos W, Strowig T, Trebicka J and Trautwein C. 
+Lelouvier B, Saez-Rodriguez J, de Vos W, Strowig T, Trebicka J, Trautwein C. 
 "Imbalanced gut microbiota fuels HCC development by shaping the hepatic 
 inflammatory microenvironment." _Under review at Nature Communications_. 2021.
+
+10. Hernansaiz-Ballesteros R, **Holland CH**, Dugourd A, Saez-Rodriguez J. "FUNKI: Interactive functional footprint-based analysis of omics data". _arXiv_. -@hernansaizballesteros2021.
 
 ^\*^_Shared first authorship_ 
 ^#^_Shared senior authorship_
 
-All of these fruitful and successful collaborations, which I have either led or contributed to, have made it possible for me to meet many fantastic scientists around the world, as illustrated in my collaboration network (Figure \@ref(fig:collaboration-network)). This list of people is by no means exhaustive but just highlights the personal known collaborators with whom I have published scientific articles. 
+All of these fruitful and successful collaborations, which I have either led or contributed to, have made it possible for me to meet many fantastic scientists around the world, as illustrated in my collaboration network (Figure \@ref(fig:collaboration-network)). This list of people is by no means exhaustive but just highlights the personal known collaborators with whom I have published joint scientific articles. 
 
-```{r collaboration-network, fig.width=8, fig.height = 5, fig.cap = "My Ph.D. collaboration network. Edge width corresponds to the number of shared publications. As my supervisor Julio Saez-Rodriguez was involved in all collaborations we are represented in the network by a single node."}
+```{r collaboration-network, fig.width=8, fig.height = 5, fig.cap = "My Ph.D. collaboration network. Edge width corresponds to the number of joined publications. As my supervisor Julio Saez-Rodriguez was involved in all my collaborations we are represented in the network by a single node."}
 relevant_authors <- c(
   "Garcia-Alonso", "Ibrahim", "Turei", "Tanevski", "Perales", "Szalai",
   "Subramanian", "Tajti", "Kim", "Ceccarelli", "Ramirez", "Lanzer", "Levinson",
   "Ghallab", "Mohs", "Joughin", "Trautwein", "Turei", "Lauffenburger", "Mereu",
   "Heyn", "Hengstler", "Gleixner", "Schneider", "Kumar", "Berres", "Stegle",
-  "Holland", "Robrahn", "Cramer", "Carmona-Saez"
+  "Holland", "Robrahn", "Cramer", "Carmona-Saez", "Dooley", "Myllys",
+  "Hernansaiz-Ballesteros", "Dugourd"
 )
 
 author_type <- tibble(last_name = c(
   "Garcia-Alonso", "Ibrahim", "Turei", "Saez-Rodriguez", "Tanevski", "Perales",
   "Szalai", "Subramanian", "Tajti", "Kim", "Ceccarelli", "Ramirez", "Lanzer",
-  "Levinson", "Holland"
+  "Levinson", "Holland", "Hernansaiz-Ballesteros", "Dugourd"
 )) %>%
   mutate(class = "internal")
 
