@@ -6,7 +6,7 @@ This work is based on three published manuscripts, each forming a separate chapt
 
 1. **Holland CH**, Szalai B, Saez-Rodriguez J. "Transfer of regulatory knowledge
 from human to mouse for functional genomics analysis." _Biochimica et Biophysica
-Acta (BBA) - Gene Regulatory Mechanisms._ -@holland_2020. DOI:
+Acta (BBA) - Gene Regulatory Mechanisms._ [-@holland_2020]. DOI:
 [10.1016/j.bbagrm.2019.194431](https://doi.org/10.1016/j.bbagrm.2019.194431).
 
 <!--
