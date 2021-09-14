@@ -13,15 +13,16 @@ advisor: "Prof. Dr. Ursula Klingmüller"
 altadvisor: "Prof. Dr. Julio Saez-Rodriguez"
 
 # +-----Dates------------------------------------------------------------+
-submissionmonth: "June"
+submissionmonth: "September"
 submissionyear: "2021"
-defense: "01.07.2021"
+defense: "03.12.2021"
 
 knit: bookdown::render_book
 site: bookdown::bookdown_site
 
 header-includes:
-   - \usepackage[parfill]{parskip}
+  - \usepackage[parfill]{parskip}
+  - \usepackage{tocloft}
 
 # This will automatically install the {remotes} package and {thesisdown}
 # Change this to FALSE if you'd like to install them manually on your own.
@@ -33,6 +34,7 @@ params:
 output:
   # thesisdown::thesis_pdf:
   #     toc_depth: 2
+  #     extra_dependencies: ["flafter"]
   thesisdown::thesis_gitbook: default
 #  thesisdown::thesis_word: default
 #  thesisdown::thesis_epub: default
@@ -78,6 +80,8 @@ knitr::opts_chunk$set(
   fig.path  = "figures/",
   fig.align = "center",
   out.width = "80%",
+  # fig.pos = "!H", 
+  # out.extra = "",
   dev = "png",
   dpi = 300
 )
@@ -182,10 +186,10 @@ Alternatively, you can put that content in files like 00--prelim.Rmd and
 
 ```
 
-## Acknowledgements {-}
-```{r child=here::here("prelims", "acknowledgements.Rmd")}
+<!-- ## Acknowledgements {-} -->
+<!-- ```{r child=here::here("prelims", "acknowledgements.Rmd")} -->
 
-```
+<!-- ``` -->
 
 `r if(!knitr:::is_latex_output()) '## Abstract {-}'`
 ```{r eval=!knitr::is_latex_output(), child=here::here("prelims", "abstract.Rmd")}
