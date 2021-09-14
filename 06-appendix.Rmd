@@ -82,11 +82,6 @@ knitr::include_graphics(here::here("data/sc_benchmark/SFigure13.png"))
 knitr::include_graphics(here::here("data/sc_benchmark/SFigure14.png"))
 ```
 
-```{r scbench-fig-s15, fig.cap = "a TF activity and b gene essentiality for the TF/gene SPI1 in lymphoid and myeloid cells. c Correlation of the differences in TF activity and differences in gene essentiality separately for all tool-protocol combinations. The results are summarized for each TF analysis tool. The points on the violin plots represent the different scRNA-seq protocols."}
-knitr::include_graphics(here::here("data/sc_benchmark/SFigure15.png"))
-```
-
-
 # Transcriptomic cross-species analysis of chronic liver disease reveals a consistent regulation pattern between humans and mice
 ## Supplementary Material and Methods {#liver-smm}
 ### Collecting, curating, and processing publicly available genome-wide transcriptomics data
@@ -187,7 +182,7 @@ knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figur
 knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figure 3.png"))
 ```
 
-```{r liver-sfig-4, fig.cap = "Expression changes in an acute liver damage mouse model induced by administration of a single administration of CCl~4~. A. Experimental design. B. Histological analysis with hematoxylin and eosin (HE) staining, fibrosis grade visualized by Sirius red, and infiltration of immune cells by CD45. The images show induction of pericentral liver lobule damage but without fibrosis development. Scale bars: 100 µm (HE; Sirius red) and 50 µm (CD45). C. Clinical chemistry with alanine transaminase (ALT), aspartate transaminase (AST) activities in plasma. D. PCA analysis of global expression changes. E. Volcano plots at12 hours, and on days 1 and 2 after CCl~4~ administration. F. Genes with the highest log-fold changes. G. Time-resolved clustering of deregulated genes. "}
+```{r liver-sfig-4, fig.cap = "Expression changes in an acute liver damage mouse model induced by administration of a single administration of CCl~4~. A. Experimental design. B. Histological analysis with hematoxylin and eosin (HE) staining, fibrosis grade visualized by Sirius red, and infiltration of immune cells by CD45. The images show induction of pericentral liver lobule damage but without fibrosis development. Scale bars: 100 µm (HE; Sirius red) and 50 µm (CD45). C. Clinical chemistry with alanine transaminase (ALT), aspartate transaminase (AST) activities in plasma. D. PCA analysis of global expression changes. E. Volcano plots at12 hours, and on days 1 and 2 after CCl~4~ administration. F. Genes with the highest log-fold changes. G. Time-resolved clustering of deregulated genes. The panels B and C were provided by Ahmed Ghallab."}
 knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figure 4.png"))
 ```
 
@@ -195,7 +190,7 @@ knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figur
 knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figure 5.png"))
 ```
 
-```{r liver-sfig-6, fig.cap = "Characterization and expression changes of mouse liver tissue after two-third hepatectomy. A. Experimental design. B. Transient increase in cell proliferation after hepatectomy based on BrDU staining and lobule area at different time periods after hepatectomy. C. Tissue morphology visualized by co-staining of bile canaliculi (DPPIV; green), pericentral hepatocytes (glutamine synthetase, white) and sinusoidal endothelial cells (yellow). D. PCA analysis of global expression changes. E. Volcano plots at 12 hours, and on days 1 and 2 after partial hepatectomy. F. Genes with the highest log-fold changes. G. Time-resolved clustering of deregulated genes."}
+```{r liver-sfig-6, fig.cap = "Characterization and expression changes of mouse liver tissue after two-third hepatectomy. A. Experimental design. B. Transient increase in cell proliferation after hepatectomy based on BrDU staining and lobule area at different time periods after hepatectomy. C. Tissue morphology visualized by co-staining of bile canaliculi (DPPIV; green), pericentral hepatocytes (glutamine synthetase, white) and sinusoidal endothelial cells (yellow). D. PCA analysis of global expression changes. E. Volcano plots at 12 hours, and on days 1 and 2 after partial hepatectomy. F. Genes with the highest log-fold changes. G. Time-resolved clustering of deregulated genes. The panels B and C were provided by Ahmed Ghallab."}
 knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figure 6.png"))
 ```
 
@@ -203,7 +198,7 @@ knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figur
 knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figure 7.png"))
 ```
 
-```{r liver-sfig-8, fig.cap = "Gene expression changes at different time intervals after induction of obstructive cholestasis by bile duct ligation (BDL). A. Experimental design. B. Histological analysis with hematoxylin and eosin (HE) staining, fibrosis grade visualized by Sirius red, and infiltration of immune cells by CD45. The images show bile infarct formation on days 1 and 3, and periportal fibrosis on day 21. Scale bars: 50 µm (HE; CD45) and 200 µm (Sirius red). C. Clinical chemistry with alanine transaminase (ALT), aspartate transaminase (AST) and alkaline phosphatase activities in plasma. D. PCA analysis of global expression changes. E. Volcano plots on days 1, 3 and 7 after BDL. F. Genes with the highest log-fold changes. G. Time-resolved clustering of deregulated genes."}
+```{r liver-sfig-8, fig.cap = "Gene expression changes at different time intervals after induction of obstructive cholestasis by bile duct ligation (BDL). A. Experimental design. B. Histological analysis with hematoxylin and eosin (HE) staining, fibrosis grade visualized by Sirius red, and infiltration of immune cells by CD45. The images show bile infarct formation on days 1 and 3, and periportal fibrosis on day 21. Scale bars: 50 µm (HE; CD45) and 200 µm (Sirius red). C. Clinical chemistry with alanine transaminase (ALT), aspartate transaminase (AST) and alkaline phosphatase activities in plasma. D. PCA analysis of global expression changes. E. Volcano plots on days 1, 3 and 7 after BDL. F. Genes with the highest log-fold changes. G. Time-resolved clustering of deregulated genes. The panels B and C were provided by Ahmed Ghallab."}
 knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figure 8.png"))
 ```
 
@@ -235,7 +230,7 @@ knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figur
 knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figure 15.png"))
 ```
 
-```{r liver-sfig-16, fig.cap = "Aldo-keto reductase (AKR1B10) and annexin V (ANXA5) increase in chronic liver disease of mice and humans. A. Immunostaining of AKR1B10 and ANXA5 at different stages during chronic liver disease progression induced by chronic CCl~4~ administration in mice; AKR1B10 shows clusters of positive signals at 12 months (arrows); ANXA5 stained positive in the progressive ductular reaction. B. AKR1B10 and ANXA5 immunostaining in fibrotic tissues of human patients showing similar expression patterns as in mice. Scale bars: 100 µm."}
+```{r liver-sfig-16, fig.cap = "Aldo-keto reductase (AKR1B10) and annexin V (ANXA5) increase in chronic liver disease of mice and humans. A. Immunostaining of AKR1B10 and ANXA5 at different stages during chronic liver disease progression induced by chronic CCl~4~ administration in mice; AKR1B10 shows clusters of positive signals at 12 months (arrows); ANXA5 stained positive in the progressive ductular reaction. B. AKR1B10 and ANXA5 immunostaining in fibrotic tissues of human patients showing similar expression patterns as in mice. Scale bars: 100 µm. The entire figure was provided by Ahmed Ghallab."}
 knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figure 16.png"))
 ```
 
