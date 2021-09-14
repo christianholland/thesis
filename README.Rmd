@@ -17,19 +17,19 @@ knitr::opts_chunk$set(
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a71856c3-c83a-4be6-aa3b-642e0e3ec82e/deploy-status)](https://app.netlify.com/sites/christianholland-thesis/deploys)
 <!-- badges: end -->
 
-## From gene expression to pathway and transcription factor activities to acquire functional and mechanistic insight into chronic liver diseases
+## From gene expression to pathway and transcription factor activities to study chronic liver diseases
 
 This thesis is based on three manuscripts each forming a separate chapter. An online version of this thesis can be accessed at [Netlify](https://christianholland-thesis.netlify.app).
 
 ### Chapter 1
 
-Transfer of regulatory knowledge from human to mouse for functional genomics analysis ([Publication](https://doi.org/10.1016/j.bbagrm.2019.194431), [GitHub repository](https://github.com/saezlab/ConservedFootprints))
+Transfer of regulatory knowledge from human to mouse for functional genomics analysis ([Publication](https://doi.org/10.1016/j.bbagrm.2019.194431), [GitHub repository](https://github.com/saezlab/ConservedFootprints)).
 
 ### Chapter 2
 
 Robustness and applicability of transcription factor and pathway analysis tools 
-on single-cell RNA-seq data ([Publication](https://doi.org/10.1186/s13059-020-1949-z), [GitHub repository](https://github.com/saezlab/FootprintMethods_on_scRNAseq))
+on single-cell RNA-seq data ([Publication](https://doi.org/10.1186/s13059-020-1949-z), [GitHub repository](https://github.com/saezlab/FootprintMethods_on_scRNAseq)).
 
 ### Chapter 3
 
-Transcriptomic cross-species analysis of chronic liver disease reveals a consistent regulation pattern between humans and mice ([GitHub repository](https://github.com/saezlab/liver-disease-atlas))
+Transcriptomic cross-species analysis of chronic liver disease reveals consistent regulation between humans and mice ([Publication](https://doi.org/10.1002/hep4.1797), [GitHub repository](https://github.com/saezlab/liver-disease-atlas)).
