@@ -331,7 +331,7 @@
     born in: {\@birthplace} \par
     Oral examination: {\@defense}
   \end{center}
-  \newpage
+  \cleardoublepage
   \thispagestyle{empty}
   \vspace*{250px}
   \begin{center}
