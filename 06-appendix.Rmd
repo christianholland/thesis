@@ -82,7 +82,7 @@ knitr::include_graphics(here::here("data/sc_benchmark/SFigure13.png"))
 knitr::include_graphics(here::here("data/sc_benchmark/SFigure14.png"))
 ```
 
-# Transcriptomic cross-species analysis of chronic liver disease reveals a consistent regulation pattern between humans and mice
+# Transcriptomic cross-species analysis of chronic liver disease reveals consistent regulation between humans and mice
 ## Supplementary Material and Methods {#liver-smm}
 ### Collecting, curating, and processing publicly available genome-wide transcriptomics data
 The raw data of the publicly available genome-wide transcriptomic studies (.CEL files for microarrays and count matrices for RNA-seq) were downloaded from Gene Expression Omnibus (GEO; @edgar_2002) and ArrayExpress [@kauffmann_2009]. For the respective accession, identifier see Table \@ref(tab:liver-tab-1). Associated metadata was manually collected or accessed via the R/Bioconductor package GEOquery (version 2.56.0; @davis_2007). To further process the raw data of microarrays and RNA-seq a suite of different Bioconductor packages [@gentleman_2004] was used. 
@@ -230,7 +230,7 @@ knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figur
 knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figure 15.png"))
 ```
 
-```{r liver-sfig-16, fig.cap = "Aldo-keto reductase (AKR1B10) and annexin V (ANXA5) increase in chronic liver disease of mice and humans. A. Immunostaining of AKR1B10 and ANXA5 at different stages during chronic liver disease progression induced by chronic CCl~4~ administration in mice; AKR1B10 shows clusters of positive signals at 12 months (arrows); ANXA5 stained positive in the progressive ductular reaction. B. AKR1B10 and ANXA5 immunostaining in fibrotic tissues of human patients showing similar expression patterns as in mice. Scale bars: 100 µm. The entire figure was provided by Ahmed Ghallab."}
+```{r liver-sfig-16, out.width = "60%", fig.cap = "Aldo-keto reductase (AKR1B10) and annexin V (ANXA5) increase in CLD of mice and humans. A. Immunostaining of AKR1B10 and ANXA5 at different stages during CLD progression induced by chronic CCl~4~ administration in mice; AKR1B10 shows clusters of positive signals at 12 months (arrows); ANXA5 stained positive in the progressive ductular reaction. B. AKR1B10 and ANXA5 immunostaining in fibrotic tissues of human patients showing similar expression patterns as in mice. Scale bars: 100 µm. The entire figure was provided by Ahmed Ghallab."}
 knitr::include_graphics(here::here("data/liver_disease_atlas/Supplementary Figure 16.png"))
 ```
 

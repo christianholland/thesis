@@ -2,7 +2,7 @@
 
 
 ## Preface
-The text of the following chapter is taken largely from the publication “[Robustness and applicability of transcription factor and pathway analysis tools on single-cell RNA-seq data](https://doi.org/10.1186/s13059-020-1949-z)” [@holland_2020a] and was originally written by myself. Changes were made to in order to focus on my contribution to this project. Unless otherwise stated I performed all analyses myself. As the first author of this study the publishing house Springer Nature grants me the right to include this work in my dissertation. 
+The text of the following chapter is taken largely from the publication “[Robustness and applicability of transcription factor and pathway analysis tools on single-cell RNA-seq data](https://doi.org/10.1186/s13059-020-1949-z)” [@holland_2020a] that was originally written by myself. Changes were made to focus on my contribution to this project. Unless otherwise stated I performed all analyses myself. As the first author of this study the publishing house Springer Nature grants me the right to include this work in my dissertation. 
 
 ## Background
 

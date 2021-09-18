@@ -1,7 +1,7 @@
 # Transfer of regulatory knowledge from human to mouse for functional genomics analysis {#cross-species-chapter}
 
 ## Preface
-The text of the following chapter is largely taken from the publication “[Transfer of regulatory knowledge from human to mouse for functional genomics analysis](https://doi.org/10.1016/j.bbagrm.2019.194431)” [@holland_2020] and was originally written by myself. The only changes were made to clarify my contribution to this project. Unless otherwise stated I performed all analyses myself. As the first author of this study the publishing house Elsevier grants me the right to include this work in my dissertation.
+The text of the following chapter is largely taken from the publication “[Transfer of regulatory knowledge from human to mouse for functional genomics analysis](https://doi.org/10.1016/j.bbagrm.2019.194431)” [@holland_2020] that was originally written by myself. The only changes were made to clarify my contribution to this project. Unless otherwise stated I performed all analyses myself. As the first author of this study the publishing house Elsevier grants me the right to include this work in my dissertation.
 
 ## Background
 

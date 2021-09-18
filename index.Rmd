@@ -36,7 +36,7 @@ output:
   #     toc_depth: 2
   #     extra_dependencies: ["flafter"]
   thesisdown::thesis_gitbook: default
-#  thesisdown::thesis_word: default
+ # thesisdown::thesis_word: default
 #  thesisdown::thesis_epub: default
 
 # If you are creating a PDF you'll need to write your preliminary content 
@@ -186,10 +186,10 @@ Alternatively, you can put that content in files like 00--prelim.Rmd and
 
 ```
 
-<!-- ## Acknowledgements {-} -->
-<!-- ```{r child=here::here("prelims", "acknowledgements.Rmd")} -->
+## Acknowledgements {-}
+```{r child=here::here("prelims", "acknowledgements.Rmd")}
 
-<!-- ``` -->
+```
 
 `r if(!knitr:::is_latex_output()) '## Abstract {-}'`
 ```{r eval=!knitr::is_latex_output(), child=here::here("prelims", "abstract.Rmd")}
