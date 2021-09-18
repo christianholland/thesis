@@ -2,13 +2,13 @@ book_filename: "thesis"
 chapter_name: "Chapter "
 rmd_files:
     - "index.Rmd"
-    - "01-intro.Rmd"
-    - "02-cross-species-benchmark.Rmd"
-    - "03-scrna-seq-benchmark.Rmd"
-    - "04-liver-disease-atlas.Rmd"
-    - "05-conclusion.Rmd"
-    - "06-appendix.Rmd"
-    - "99-references.Rmd"
+    - "sections/01-intro.Rmd"
+    - "sections/02-cross-species-benchmark.Rmd"
+    - "sections/03-scrna-seq-benchmark.Rmd"
+    - "sections/04-liver-disease-atlas.Rmd"
+    - "sections/05-conclusion.Rmd"
+    - "sections/06-appendix.Rmd"
+    - "sections/99-references.Rmd"
 download: [
     ["thesis.pdf", "PDF"],
     ["thesis.epub", "EPUB"],

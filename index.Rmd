@@ -51,7 +51,7 @@ zusammenfassung: '`r if(knitr:::is_latex_output()) paste(readLines(here::here("p
 # Specify the location of the bibliography below
 bibliography: bib/references.bib
 # Download your specific csl file and refer to it in the line below.
-csl: csl/apa.csl
+csl: style/apa.csl
 lot: false
 lof: false
 ---
