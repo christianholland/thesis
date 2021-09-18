@@ -9,88 +9,17 @@ from human to mouse for functional genomics analysis." _Biochimica et Biophysica
 Acta (BBA) - Gene Regulatory Mechanisms._ [-@holland_2020]. DOI:
 [10.1016/j.bbagrm.2019.194431](https://doi.org/10.1016/j.bbagrm.2019.194431).
 
-<!--
-```{r credit-transfer, fig.cap = "Authors contribution to the publication \"Transfer of regulatory knowledge from human to mouse for functional genomics analysis\" based on CRediT. Colored tiles show the contribution with the levels \"supporting\" (light), \"equal\" (medium), and \"lead\" (dark)."}
-f = read_csv(here("data/my_publications/credit - transfer.csv")) %>%
-  rename(type = X1) %>%
-  mutate(type = fct_inorder(type)) %>%
-  pivot_longer(-type, names_to = "author", values_to = "category") %>%
-  mutate(author = fct_inorder(author)) %>%
-  mutate(category = factor(category, 
-                           levels = c("no","supporting", "equal", "lead"))) %>%
-  ggplot(aes(x=author, y=fct_rev(type), fill = category)) +
-  geom_tile() +
-  scale_fill_manual(values = c("white", aachen_color(c("green25","green50", 
-                                            "green")))) +
-  labs(x=NULL, y=NULL) +
-  theme(legend.position = "none",
-        axis.text.x = element_text(angle = 90, hjust=1, vjust = 0.5),
-        axis.line = element_blank(),
-        panel.border = element_rect(colour = "black", fill=NA, size=1)) +
-  coord_fixed()
-
-knitr::include_graphics(here::here("figure/credit-transfer-1.png"))
-```
--->
-
 2. **Holland CH**, Tanevski J, Perales-Patón J, Gleixner J, Kumar MP, Mereu E, 
 Joughin BA, Stegle O, Lauffenburger DA, Heyn H, Szalai B, Saez-Rodriguez, J. 
 "Robustness and applicability of transcription factor and pathway analysis tools 
 on single-cell RNA-seq data." _Genome Biology._ [-@holland_2020a]. DOI: 
 [10.1186/s13059-020-1949-z](https://doi.org/10.1186/s13059-020-1949-z).
-<!--
-```{r credit-scbenchmark,fig.cap = "Authors contribution to the publication \"Robustness and applicability of transcription factor and pathway analysis tools on single-cell RNA-seq data\" based on CRediT. Colored tiles show the contribution with the levels \"supporting\" (light), \"equal\" (medium), and \"lead\" (dark)."}
-f = read_csv(here("data/my_publications/credit - scbenchmark.csv")) %>%
-  rename(type = X1) %>%
-  mutate(type = fct_inorder(type)) %>%
-  pivot_longer(-type, names_to = "author", values_to = "category") %>%
-  mutate(author = fct_inorder(author)) %>%
-  mutate(category = factor(category, 
-                           levels = c("no","supporting", "equal", "lead"))) %>%
-  ggplot(aes(x=author, y=fct_rev(type), fill = category)) +
-  geom_tile() +
-  scale_fill_manual(values = c("white", aachen_color(c("green25","green50", 
-                                            "green")))) +
-  labs(x=NULL, y=NULL) +
-  theme(legend.position = "none",
-        axis.text.x = element_text(angle = 90, hjust=1, vjust = 0.5),
-        axis.line = element_blank(),
-        panel.border = element_rect(colour = "black", fill=NA, size=1)) +
-  coord_fixed()
-
-knitr::include_graphics(here::here("figure/credit-scbenchmark-1.png"))
-```
--->
 
 3. **Holland CH**, Ramirez Flores RO, Myllys M, Hassan R, Edlund K, Hofmann U, 
 Marchan R, Cadenas C, Reinders J, Hoehme S, Seddek A, Dooley S, Keitel V, 
 Godoy P, Begher-Tibbe B, Trautwein C, Rupp C, Mueller S, Longerich T, 
 Hengstler JG^#^, Saez-Rodriguez J^#^, Ghallab A^#^. "Transcriptomic 
 cross-species analysis of chronic liver disease reveals consistent regulation between humans and mice." _Hepatology Communications_. [-@holland_2021]. DOI: [10.1002/hep4.1797](https://doi.org/10.1002/hep4.1797).
-<!--
-```{r credit-liver, fig.cap = "Authors contribution to the (unpublished) manuscript \"Transcriptomic cross-species analysis of chronic liver disease reveals a consistent regulation pattern between humans and mice\" based on CRediT. Colored tiles show the contribution with the levels \"supporting\" (light), \"equal\" (medium), and \"lead\" (dark)."}
-f = read_csv(here("data/my_publications/credit - liver.csv")) %>%
-  rename(type = X1) %>%
-  mutate(type = fct_inorder(type)) %>%
-  pivot_longer(-type, names_to = "author", values_to = "category") %>%
-  mutate(category = replace_na(category, "no")) %>%
-  mutate(author = fct_inorder(author)) %>%
-  mutate(category = factor(category, 
-                           levels = c("no","supporting", "equal", "lead"))) %>%
-  ggplot(aes(x=author, y=fct_rev(type), fill = category)) +
-  geom_tile() +
-  scale_fill_manual(values = c("white", aachen_color(c("green25","green50", 
-                                            "green")))) +
-  labs(x=NULL, y=NULL) +
-  theme(legend.position = "none",
-        axis.text.x = element_text(angle = 90, hjust=1, vjust = 0.5),
-        axis.line = element_blank(),
-        panel.border = element_rect(colour = "black", fill=NA, size=1)) +
-  coord_fixed()
-
-knitr::include_graphics(here::here("figure/credit-liver-1.png"))
-```
--->
 
 **Other publications that I have contributed to but are not presented in this thesis**
 
