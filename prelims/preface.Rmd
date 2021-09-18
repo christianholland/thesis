@@ -1,4 +1,4 @@
-This work is based on three published manuscripts, each forming a separate chapter. I am the sole lead author as I have done the vast majority of all computational analysis and written every draft myself.
+This work is based on three published manuscripts, each forming a separate chapter. I am the sole lead author of all of them as I have performed the vast majority of all computational analyses and have written every manuscript myself.
 
 **The following manuscripts are included as part of this thesis**
 
@@ -36,7 +36,7 @@ knitr::include_graphics(here::here("figure/credit-transfer-1.png"))
 2. **Holland CH**, Tanevski J, Perales-Patón J, Gleixner J, Kumar MP, Mereu E, 
 Joughin BA, Stegle O, Lauffenburger DA, Heyn H, Szalai B, Saez-Rodriguez, J. 
 "Robustness and applicability of transcription factor and pathway analysis tools 
-on single-cell RNA-seq data." _Genome Biology._ -@holland_2020a. DOI: 
+on single-cell RNA-seq data." _Genome Biology._ [-@holland_2020a]. DOI: 
 [10.1186/s13059-020-1949-z](https://doi.org/10.1186/s13059-020-1949-z).
 <!--
 ```{r credit-scbenchmark,fig.cap = "Authors contribution to the publication \"Robustness and applicability of transcription factor and pathway analysis tools on single-cell RNA-seq data\" based on CRediT. Colored tiles show the contribution with the levels \"supporting\" (light), \"equal\" (medium), and \"lead\" (dark)."}
@@ -66,7 +66,7 @@ knitr::include_graphics(here::here("figure/credit-scbenchmark-1.png"))
 Marchan R, Cadenas C, Reinders J, Hoehme S, Seddek A, Dooley S, Keitel V, 
 Godoy P, Begher-Tibbe B, Trautwein C, Rupp C, Mueller S, Longerich T, 
 Hengstler JG^#^, Saez-Rodriguez J^#^, Ghallab A^#^. "Transcriptomic 
-cross-species analysis of chronic liver disease reveals consistent regulation between humans and mice." _Hepatology Communications_. -@holland_2021. DOI: [10.1002/hep4.1797](https://doi.org/10.1002/hep4.1797).
+cross-species analysis of chronic liver disease reveals consistent regulation between humans and mice." _Hepatology Communications_. [-@holland_2021]. DOI: [10.1002/hep4.1797](https://doi.org/10.1002/hep4.1797).
 <!--
 ```{r credit-liver, fig.cap = "Authors contribution to the (unpublished) manuscript \"Transcriptomic cross-species analysis of chronic liver disease reveals a consistent regulation pattern between humans and mice\" based on CRediT. Colored tiles show the contribution with the levels \"supporting\" (light), \"equal\" (medium), and \"lead\" (dark)."}
 f = read_csv(here("data/my_publications/credit - liver.csv")) %>%
@@ -98,49 +98,49 @@ Next to these three main projects, I contributed during my candidature also to s
 
 1. Garcia-Alonso L, **Holland CH**, Ibrahim MM, Turei D, Saez-Rodriguez J. 
 "Benchmark and integration of resources for the estimation of human 
-transcription factor activities." _Genome Research._ -@garciaalonso_2019. DOI:
+transcription factor activities." _Genome Research._ [-@garciaalonso_2019]. DOI:
 [10.1101/gr.240663.118](https://doi.org/10.1101/gr.240663.118).
 
 2. Szalai B, Subramanian V, **Holland CH**, Alföldi R, Puskás LG, Saez-Rodriguez 
 J. "Signatures of cell death and proliferation in perturbation transcriptomics 
 data - from confounding factor to effective prediction." 
-_Nucleic Acids Research._ -@szalai_2019. DOI: 
+_Nucleic Acids Research._ [-@szalai_2019]. DOI: 
 [10.1093/nar/gkz805](https://doi.org/10.1093/nar/gkz805).
 
 3. Ghallab A, Myllys M, **Holland CH**, Zaza A, Murad W, Hassan R, Ahmed YA, 
 Abbas T, Abdelrahim EA, Schneider KM, Matz-Soja M, Reinders J, Gebhardt R, 
 Berres ML, Hatting M, Drasdo D, Saez-Rodriguez J, Trautwein C, Hengstler JG. 
-"Influence of Liver Fibrosis on Lobular Zonation." _Cells._ -@ghallab_2019a. DOI: 
+"Influence of Liver Fibrosis on Lobular Zonation." _Cells._ [-@ghallab_2019a]. DOI: 
 [10.3390/cells8121556](https://doi.org/10.3390/cells8121556).
 
 4. Tajti F^\*^, Kuppe C^\*^, Antoranz A, Ibrahim MM, Kim H, Ceccarelli F, **Holland CH**, 
 Olauson H, Floege J, Alexopoulos LG, Kramann R, Saez-Rodriguez J. "A functional 
 landscape of chronic kidney disease entities from public transcriptomic data." 
-_Kidney International Reports._ -@tajti_2020. DOI: 
+_Kidney International Reports._ [-@tajti_2020]. DOI: 
 [10.1016/j.ekir.2019.11.005](https://doi.org/10.1016/j.ekir.2019.11.005).
 
 5. Mohs A, Otto T, Schneider KM, Peltzer M, Boekschoten M, **Holland CH**, 
 Hudert CA, Kalveram L, Wiegand S, Saez-Rodriguez J, Longerich T, Hengstler JG, 
 Trautwein C. "Hepatocyte-specific NRF2 activation controls fibrogenesis and 
-carcinogenesis in steatohepatitis." _Journal of Hepatology_. -@mohs_2020. DOI: [10.1016/j.jhep.2020.09.037](https://doi.org/10.1016/j.jhep.2020.09.037).
+carcinogenesis in steatohepatitis." _Journal of Hepatology_. [-@mohs_2020]. DOI: [10.1016/j.jhep.2020.09.037](https://doi.org/10.1016/j.jhep.2020.09.037).
 
 6. Ramirez Flores RO^\*^, Lanzer JD^\*^, **Holland CH**, Leuschner F, Most P, 
 Schultz J-H, Levinson RT^#^, Saez-Rodriguez J^#^. "Consensus Transcriptional 
 Landscape of Human End-Stage Heart Failure." 
-_Journal of the American Heart Association_. -@ramirezflores_2021. DOI: 
+_Journal of the American Heart Association_. [-@ramirezflores_2021]. DOI: 
 [10.1161/JAHA.120.019667](https://doi.org/10.1161/JAHA.120.019667).
 
 7. Lopez-Dominguez R, Toro-Dominguez D, Martorell-Marugan J, Garcia-Moreno A,
 **Holland CH**, Saez-Rodriguez J, Goldman D, Petri M, Alarcón-Riquelme ME^#^,
 Carmona-Sáez P^#^.Transcription Factor Activity Inference in Systemic Lupus
-Erythematosus." _Life_. -@lopezdominguez_2021. DOI: 
+Erythematosus." _Life_. [-@lopezdominguez_2021]. DOI: 
 [10.3390/life11040299](https://doi.org/10.3390/life11040299).
 
 8. Robrahn L, Dupont A, Jumpertz S, Zhang K, **Holland CH**, Guillaume J, 
 Rappold S, Cerovic V, Saez-Rodriguez J, Hornef MW, Cramer T. "Conditional 
 deletion of HIF-1a provides new insight regarding the murine response to 
 gastrointestinal infection with Salmonella Typhimurium." _bioRxiv._ 
--@robrahn_2021. DOI: 
+[-@robrahn_2021]. DOI: 
 [10.1101/2021.01.16.426940](https://doi.org/10.1101/2021.01.16.426940).
 
 9. Schneider KM^\*^, Mohs A^\*^, Gui W, Galvez EJC, Candels LS, **Holland CH**, 
@@ -149,14 +149,14 @@ Lelouvier B, Saez-Rodriguez J, de Vos W, Strowig T, Trebicka J, Trautwein C.
 "Imbalanced gut microbiota fuels HCC development by shaping the hepatic 
 inflammatory microenvironment." _Under review at Nature Communications_. 2021.
 
-10. Hernansaiz-Ballesteros R, **Holland CH**, Dugourd A, Saez-Rodriguez J. "FUNKI: Interactive functional footprint-based analysis of omics data". _arXiv_. -@hernansaizballesteros2021.
+10. Hernansaiz-Ballesteros R, **Holland CH**, Dugourd A, Saez-Rodriguez J. "FUNKI: Interactive functional footprint-based analysis of omics data". _arXiv_. [-@hernansaizballesteros2021]. ID: [arXiv:2109.05796](https://arxiv.org/abs/2109.05796).
 
 ^\*^_Shared first authorship_ 
 ^#^_Shared senior authorship_
 
 All of these fruitful and successful collaborations, which I have either led or contributed to, have made it possible for me to meet many fantastic scientists around the world, as illustrated in my collaboration network (Figure \@ref(fig:collaboration-network)). This list of people is by no means exhaustive but just highlights the personal known collaborators with whom I have published joint scientific articles. 
 
-```{r collaboration-network, fig.width=8, fig.height = 5, fig.cap = "My Ph.D. collaboration network. Edge width corresponds to the number of joined publications. As my supervisor Julio Saez-Rodriguez was involved in all my collaborations we are represented in the network by a single node."}
+```{r collaboration-network, fig.width=9, fig.height = 6, fig.cap = "My Ph.D. collaboration network. Edge width corresponds to the number of joined publications. As my supervisor Julio Saez-Rodriguez was involved in all my collaborations we are represented in the network by a single node."}
 relevant_authors <- c(
   "Garcia-Alonso", "Ibrahim", "Turei", "Tanevski", "Perales", "Szalai",
   "Subramanian", "Tajti", "Kim", "Ceccarelli", "Ramirez", "Lanzer", "Levinson",
@@ -284,3 +284,5 @@ g %>%
     )
   )
 ```
+
+\cleardoublepage

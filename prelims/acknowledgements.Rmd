@@ -1,2 +1,24 @@
-Thanks.
+When I started my Ph.D. back in May 2017 in Aachen I would have never expected to finally submit my thesis four years later at Heidelberg University. Looking back, I am thankful for every experience and memory I was able to collect that allowed me to grow as an early career researcher but also as a human being. However, I would never have achieved anything presented in this thesis just on my own. Professionally and privately I was always fortunate to be accompanied by many patient, supportive, and friendly persons, I would like to thank here:
+
+First of all, I  wish to express my deepest gratitude to my doctoral supervisor Prof. Dr. Julio Saez-Rodriguez who gave me the chance to perform my studies in his lab. Throughout this entire time, I felt welcomed and respected. His liberal way of leading the lab promoted a great working atmosphere I have never experienced before to this extent. I truly enjoyed the freedom and always felt safe if things went badly or ended up in a dead-end. Moreover, through the open-door sessions, Julio was reachable on a daily basis which I definitely don’t take for granted. In summary, Julio was the best supervisor I could have imagined and I deeply cherished the time I was allowed to spend in his lab. 
+
+Also, I am indebted to my faculty supervisor Prof. Dr. Ursula Klingmüller. Though it was not possible to share my entire Ph.D. process from the beginning with you due to the movement from Aachen to Heidelberg, I am nevertheless thankful for the lively discussions and feedback I received in the remaining time. Also, I would like to thank Prof. Dr. Robert Russell who kindly agreed to act as the chair of my thesis advisory committee. Lastly, I thank Prof. Dr. Karsten Niehaus who is my former supervisor of my bachelor’s and master’s studies at Bielefeld University for his willingness to be part of my committee.
+
+Next, I am thankful for every past and current “saezlab” member who made this time very special and makes me now also kind of sad that this time has come to an end. 
+
+In particular, I wish to show my gratitude to the former postdoc Dr. Bence Szalai who especially during the first two years took care of me from my very first day. Just like Julio Bence has the talent to generate a psychologically safe and motivating environment. In the end, Bence’s unwavering support and supervision were an existential decisive factor for my scientific and personal development. I am more than happy that our joyful collaboration was successfully crowned by several joint publications. 
+
+Also, I would like to thank other lab members who always felt much more like friends than colleagues: Alberto, Attila, Aurélien, Hyojin, Javier, Jovan, Luis, Nico, Mi, Olga, Rico, Rosa. All of you contributed in your own way to my Ph.D. Either with scientific discussions, valuable and highly appreciated contributions to my projects, or with fun activities outside of the office. Although I am no longer in contact with all of you, I am more than happy to have met you and will keep our time in the lab in memory.
+
+I also wish to acknowledge the significant contributions of my many collaborators, without them the completion of my thesis would not have been possible. In particular, I would like to mention Prof. Dr. Jan Hengstler from Dortmund University who especially supported me in my liver disease-related project. With his outstanding knowledge of liver physiology, he complemented my bioinformatics analyses so we formed a successful and fruitful interdisciplinary collaboration.
+
+Furthermore, I would like to thank the open-source software community who partially on a voluntary basis develop and maintain software. Without this community, my work would not have been possible.
+
+Also I am especially grateful to my family who has supported me ever since.
+
+Last but not least I wish to express my deepest gratitude to my girlfriend Laura: 
+Laura, ich danke Dir von ganzem Herzen, dafür, dass du mir tagtäglich zur Seite standest und mir über all die Jahre den Rücken freigehalten hat, sodass ich mich, wenn es drauf ankam, voll und ganz auf meine Promotion fokussieren konnte. Auch hast du mich stets in all meinen, teils sehr weitreichenden, Entscheidungen unterstützt, wie z.B. der Entschluss, dass ich mit der Arbeitsgruppe nach Heidelberg umziehe und insgesamt für knapp 2 Jahre jede zweite Woche in Heidelberg verbracht habe, oder die Entscheidung für ein halbes Jahr in die Schweiz zu ziehen um Industrieerfahrung zu sammeln. Und selbst wenn ich dann zuhause war habe ich abends dann doch noch regelmäßig vor dem Laptop gesessen und “noch schnell eine Mail geschrieben” oder “nur kurz eine Idee ausprobiert”. Zum jetzigen Zeitpunkt steht es noch nicht fest wo unsere nächste gemeinsame Station sein wird, aber wo auch immer es ist, wir werden dort zusammen sein. Ich liebe dich.
+
+\cleardoublepage
+
 
