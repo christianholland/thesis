@@ -21,3 +21,5 @@ sections/*.gdoc
 data/my_publications/credit.gsheet
 *.pdf
 
+gcp_client.json
+
