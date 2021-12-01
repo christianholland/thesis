@@ -20,6 +20,7 @@ sections/*.gdoc
 
 data/my_publications/credit.gsheet
 *.pdf
+*.key
 
 gcp_client.json
 
