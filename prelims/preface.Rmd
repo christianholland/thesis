@@ -19,7 +19,9 @@ on single-cell RNA-seq data." _Genome Biology._ [-@holland_2020a]. DOI:
 Marchan R, Cadenas C, Reinders J, Hoehme S, Seddek A, Dooley S, Keitel V, 
 Godoy P, Begher-Tibbe B, Trautwein C, Rupp C, Mueller S, Longerich T, 
 Hengstler JG^#^, Saez-Rodriguez J^#^, Ghallab A^#^. "Transcriptomic 
-cross-species analysis of chronic liver disease reveals consistent regulation between humans and mice." _Hepatology Communications_. [-@holland_2021]. DOI: [10.1002/hep4.1797](https://doi.org/10.1002/hep4.1797).
+cross-species analysis of chronic liver disease reveals consistent regulation 
+between humans and mice." _Hepatology Communications_. [-@holland_2021]. DOI: 
+[10.1002/hep4.1797](https://doi.org/10.1002/hep4.1797).
 
 **Other publications that I have contributed to but are not presented in this thesis**
 
@@ -39,13 +41,14 @@ _Nucleic Acids Research._ [-@szalai_2019]. DOI:
 3. Ghallab A, Myllys M, **Holland CH**, Zaza A, Murad W, Hassan R, Ahmed YA, 
 Abbas T, Abdelrahim EA, Schneider KM, Matz-Soja M, Reinders J, Gebhardt R, 
 Berres ML, Hatting M, Drasdo D, Saez-Rodriguez J, Trautwein C, Hengstler JG. 
-"Influence of Liver Fibrosis on Lobular Zonation." _Cells._ [-@ghallab_2019a]. DOI: 
-[10.3390/cells8121556](https://doi.org/10.3390/cells8121556).
+"Influence of Liver Fibrosis on Lobular Zonation." _Cells._ [-@ghallab_2019a]. 
+DOI: [10.3390/cells8121556](https://doi.org/10.3390/cells8121556).
 
-4. Tajti F^\*^, Kuppe C^\*^, Antoranz A, Ibrahim MM, Kim H, Ceccarelli F, **Holland CH**, 
-Olauson H, Floege J, Alexopoulos LG, Kramann R, Saez-Rodriguez J. "A functional 
-landscape of chronic kidney disease entities from public transcriptomic data." 
-_Kidney International Reports._ [-@tajti_2020]. DOI: 
+4. Tajti F^\*^, Kuppe C^\*^, Antoranz A, Ibrahim MM, Kim H, Ceccarelli F, 
+**Holland CH**, Olauson H, Floege J, Alexopoulos LG, Kramann R, 
+Saez-Rodriguez J. "A functional landscape of chronic kidney disease entities 
+from public transcriptomic data." _Kidney International Reports._ 
+[-@tajti_2020]. DOI: 
 [10.1016/j.ekir.2019.11.005](https://doi.org/10.1016/j.ekir.2019.11.005).
 
 5. Mohs A, Otto T, Schneider KM, Peltzer M, Boekschoten M, **Holland CH**, 
@@ -66,19 +69,28 @@ Erythematosus." _Life_. [-@lopezdominguez_2021]. DOI:
 [10.3390/life11040299](https://doi.org/10.3390/life11040299).
 
 8. Robrahn L, Dupont A, Jumpertz S, Zhang K, **Holland CH**, Guillaume J, 
-Rappold S, Cerovic V, Saez-Rodriguez J, Hornef MW, Cramer T. "Conditional 
-deletion of HIF-1a provides new insight regarding the murine response to 
-gastrointestinal infection with Salmonella Typhimurium." _bioRxiv._ 
-[-@robrahn_2021]. DOI: 
+Rappold S, Roth J, Cerovic V, Saez-Rodriguez J, Hornef MW, Cramer T. 
+"Stabilization but no functional influence of HIF-1a expression in the 
+intestinal epithelium during Salmonella Typhimurium infection." 
+_Infection and Immunity._ [-@robrahn_2021]. DOI: 
 [10.1101/2021.01.16.426940](https://doi.org/10.1101/2021.01.16.426940).
 
-9. Schneider KM^\*^, Mohs A^\*^, Gui W, Galvez EJC, Candels LS, **Holland CH**, 
+9. Hernansaiz-Ballesteros R, **Holland CH**, Dugourd A, Saez-Rodriguez J. 
+"FUNKI: Interactive functional footprint-based analysis of omics data". 
+_arXiv_. [-@hernansaizballesteros2021]. ID: 
+[arXiv:2109.05796](https://arxiv.org/abs/2109.05796).
+
+10. Badia-i-Mompel P, Vélez J, Braunger J, Geiss C, Dimitrov D, Müller-Dott S, 
+Taus P, Dugourd A, **Holland CH**, RO Ramirez Flores, Saez-Rodriguez J. 
+"decoupleR: Ensemble of computational methods to infer biological activities 
+from omics data". _bioRxiv._ [-@badiaimompel_2021]. DOI: 
+[10.1101/2021.11.04.467271](https://doi.org/10.1101/2021.11.04.467271).
+
+11. Schneider KM^\*^, Mohs A^\*^, Gui W, Galvez EJC, Candels LS, **Holland CH**, 
 Elfers C, Kilic K, Schneider CV, Strnad P, Wirtz TH, Marschall HU, Latz E, 
 Lelouvier B, Saez-Rodriguez J, de Vos W, Strowig T, Trebicka J, Trautwein C. 
 "Imbalanced gut microbiota fuels HCC development by shaping the hepatic 
 inflammatory microenvironment." _Under review at Nature Communications_. 2021.
-
-10. Hernansaiz-Ballesteros R, **Holland CH**, Dugourd A, Saez-Rodriguez J. "FUNKI: Interactive functional footprint-based analysis of omics data". _arXiv_. [-@hernansaizballesteros2021]. ID: [arXiv:2109.05796](https://arxiv.org/abs/2109.05796).
 
 ^\*^_Shared first authorship_ 
 ^#^_Shared senior authorship_
@@ -92,13 +104,13 @@ relevant_authors <- c(
   "Ghallab", "Mohs", "Joughin", "Trautwein", "Turei", "Lauffenburger", "Mereu",
   "Heyn", "Hengstler", "Gleixner", "Schneider", "Kumar", "Berres", "Stegle",
   "Holland", "Robrahn", "Cramer", "Carmona-Saez", "Dooley", "Myllys",
-  "Hernansaiz-Ballesteros", "Dugourd"
+  "Hernansaiz-Ballesteros", "Dugourd", "Badia-i-Mompel"
 )
 
 author_type <- tibble(last_name = c(
   "Garcia-Alonso", "Ibrahim", "Turei", "Saez-Rodriguez", "Tanevski", "Perales",
   "Szalai", "Subramanian", "Tajti", "Kim", "Ceccarelli", "Ramirez", "Lanzer",
-  "Levinson", "Holland", "Hernansaiz-Ballesteros", "Dugourd"
+  "Levinson", "Holland", "Hernansaiz-Ballesteros", "Dugourd", "Badia-i-Mompel"
 )) %>%
   mutate(class = "internal")
 
