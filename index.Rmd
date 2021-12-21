@@ -32,12 +32,12 @@ params:
 # Remove the hashtag to specify which version of output you would like.
 # Can only choose one at a time.
 output:
-  # thesisdown::thesis_pdf:
-  #     toc_depth: 2
-  #     extra_dependencies: ["flafter"]
+  thesisdown::thesis_pdf:
+      toc_depth: 2
+      extra_dependencies: ["flafter"]
   thesisdown::thesis_gitbook: default
- # thesisdown::thesis_word: default
-#  thesisdown::thesis_epub: default
+  thesisdown::thesis_word: default
+  thesisdown::thesis_epub: default
 
 # If you are creating a PDF you'll need to write your preliminary content 
 # (e.g., abstract, acknowledgements) below or use code similar to line 25-26 
