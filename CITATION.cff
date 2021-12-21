@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use any of the analysis in this thesis please cite as below."
+authors:
+- family-names: "Holland"
+  given-names: "Christian H."
+  orcid: "https://orcid.org/0000-0002-3060-5786"
+title: "From gene expression to pathway and transcription factor activities to study chronic liver diseases"
+url: "https://github.com/christianholland/thesis"
+preferred-citation:
+  type: unpublished
+  authors:
+  - family-names: "Holland"
+    given-names: "Christian H."
+    orcid: "https://orcid.org/0000-0002-3060-5786"
+  doi: "TBD"
+  month: TBD
+  title: "From gene expression to pathway and transcription factor activities to study chronic liver diseases"
+  year: 2021

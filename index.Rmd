@@ -172,12 +172,6 @@ my_today = function() {
   format(Sys.time(), '%d %B %Y')
 }
 ```
-<!--
-The acknowledgments, preface, dedication, and abstract are added into the PDF
-version automatically by inputting them in the YAML at the top of this file.
-Alternatively, you can put that content in files like 00--prelim.Rmd and
-00-abstract.Rmd like done below.
--->
 
 `r if(!knitr:::is_latex_output()) '# Front matter {-}'`
 
