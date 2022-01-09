@@ -72,8 +72,8 @@ Erythematosus." _Life_. [-@lopezdominguez_2021]. DOI:
 Rappold S, Roth J, Cerovic V, Saez-Rodriguez J, Hornef MW, Cramer T. 
 "Stabilization but no functional influence of HIF-1a expression in the 
 intestinal epithelium during Salmonella Typhimurium infection." 
-_Infection and Immunity._ [-@robrahn_2021]. DOI: 
-[10.1101/2021.01.16.426940](https://doi.org/10.1101/2021.01.16.426940).
+_Infection and Immunity._ [-@robrahn_2022]. DOI: 
+[10.1128/iai.00222-21](https://doi.org/10.1128/iai.00222-21).
 
 9. Hernansaiz-Ballesteros R, **Holland CH**, Dugourd A, Saez-Rodriguez J. 
 "FUNKI: Interactive functional footprint-based analysis of omics data". 
