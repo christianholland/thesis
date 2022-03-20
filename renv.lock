@@ -488,7 +488,7 @@
     },
     "mgcv": {
       "Package": "mgcv",
-      "Version": "1.8-34",
+      "Version": "1.8-39",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "bd4a6c4b600f58651d60d381b0e9a397",
