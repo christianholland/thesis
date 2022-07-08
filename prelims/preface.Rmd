@@ -86,13 +86,12 @@ Taus P, Dugourd A, **Holland CH**, RO Ramirez Flores, Saez-Rodriguez J.
 from omics data". _Bioinformatics Advances._ [-@badiaimompel_2022]. DOI: 
 [10.1093/bioadv/vbac016](https://doi.org/10.1093/bioadv/vbac016).
 
-11. Schneider KM^\*^, Mohs A^\*^, Gui W, Galvez EJC, Candels LS, Hoenicke L, 
-Muthukumarasamy U, **Holland CH**, Elfers C, Kilic K, Schneider CV, Strnad P, 
-Wirtz TH, Marschall HU, Latz E, Lelouvier B, Saez-Rodriguez J, de Vos W, 
-Strowig T, Trebicka J, Trautwein C. "Imbalanced gut microbiota fuels HCC 
-development by shaping the hepatic inflammatory microenvironment." 
-_Under review at Nature Communications_. 2022. 
-DOI: [xxx](xxx).
+11. Schneider KM^\*^, Mohs A^\*^, Gui W, Gálvez EJC, Candels LS, Hoenicke L, 
+Muthukumarasamy U, **Holland CH**, Elfers C, Kilic K, Schneider CV, Schierwagen R, 
+Strnad P, Wirtz TH, Marschall HU, Latz E, Lelouvier B, Saez-Rodriguez J, 
+de Vos W, Strowig T, Trebicka J and Trautwein C. "Imbalanced gut microbiota 
+fuels hepatocellular carcinoma development by shaping the hepatic inflammatory 
+microenvironment." _Nature Communications_. [-@schneider_2022]. DOI: [10.1038/s41467-022-31312-5](https://doi.org/10.1038/s41467-022-31312-5).
 
 ^\*^_Shared first authorship_ 
 ^#^_Shared senior authorship_
